@@ -1,0 +1,15 @@
+/*Headings*/
+h1 {
+    text-align: center;
+}
+
+/*Tables*/
+table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        padding: 5px;
+        text-align: left
+    }

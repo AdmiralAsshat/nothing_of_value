@@ -11,7 +11,7 @@
 
     <p>The internet is nothing more than a giant transit system of packets being sent between servers. Security was an afterthought:  the original architects were simply thrilled that the packets arrived at all. As a result, most traffic is sent over plain HTTP, which makes it trivial to intercept by packet-sniffing. A simple network analysis tool can be employed to monitor <a href="https://arstechnica.com/security/2014/06/what-the-nsa-or-anyone-can-learn-about-you-from-internet-traffic/">nearly everything you do online</a>. The information gleaned can be used by anyone:  an eavesdropper at the coffee shop, the NSA, even your <a href="https://arstechnica.com/information-technology/2015/03/atts-plan-to-watch-your-web-browsing-and-what-you-can-do-about-it/3/">ISP</a>.</p>
 
-    <p>A safer version of HTTP exists called <strong>HTTPS</strong>, which encrypts the information before being sent to the server. HTTPS will often be employed on pages that handle secure information, such as credit cards or login info. Despite our best efforts, however, HTTPS is not yet available on all websites. One reason is that the enhanced security of HTTPS creates more overhead for the website, as each packet sent requires an authentication 'handshake'. It <a href="https://www.cs.cmu.edu/~dnaylor/CostOfTheS.pdf">increases</a> the amount of time the page takes to load. Finally, operating an HTTPS website required purchasing a renewable HTTPS certificate from a certificate authority, which drives up the cost of maintaining the website. For a static website which holds no user data or sensitive information, the promise of 'security' simply may not be worth the tradeoff.</p>
+    <p>A safer version of HTTP exists called <strong>HTTPS</strong>, which encrypts the information before being sent to the server. HTTPS will often be employed on pages that handle secure information, such as credit cards or login info. Despite our best efforts, however, HTTPS is not yet available on all websites. One reason is that the enhanced security of HTTPS creates more overhead for the website, as each packet sent requires an authentication 'handshake'. It <a href="https://www.cs.cmu.edu/~dnaylor/CostOfTheS.pdf">increases</a> the amount of time the page takes to load. Finally, operating an HTTPS website required purchasing a renewable HTTPS certificate from a certificate authority, which drives up the cost of maintaining the website. For a static website which holds no user data or sensitive information, the promise of 'security' simply may not be worth the trade-off.</p>
 
     <h2>How a VPN Works</h2>
 
@@ -35,15 +35,15 @@
 
     <h2>Where to Find a VPN Provider</h2>
 
-    <p>Finding the "perfect" VPN is incredibly difficult, if not impossible. All that establishing a private VPN really requires is a remote server and a protocol to establish the secure tunnel from your device to the server. You could even setup your own on a private AWS server if you so desired. The relative ease of setup has inspired many companies to create low-cost VPN solutions as demand has soared. Unfortunately, the lack of standards and accountability limits our ability to objectively rate VPN providers and the integrity of their offerings. The following URL is an indepdently-maintained list of various VPN providers and their supported features:</p>
+    <p>Finding the "perfect" VPN is incredibly difficult, if not impossible. All that establishing a private VPN really requires is a remote server and a protocol to establish the secure tunnel from your device to the server. You could even setup your own on a private AWS server if you so desired. The relative ease of setup has inspired many companies to create low-cost VPN solutions as demand has soared. Unfortunately, the lack of standards and accountability limits our ability to objectively rate VPN providers and the integrity of their offerings. The following URL is an independently-maintained list of various VPN providers and their supported features:</p>
     https://thatoneprivacysite.net/vpn-comparison-chart/
 
     <p>The above is not the be-all-end-all resource. But thus far, it's the best we've got.</p>
 
     <p>At the bare minimum, any VPN service that you purchase should provide the minimum guarantees:</p>
     <ul>
-        <li>Absolutely no logging (VPN providers are a favorite target for law-enforcement agencies who suspect that their subscribers may be using a VPN to do illegal things. The only way that a VPN provider cannot be compelled to give up their logs about you to law enforcemnt is if they don't keep any logs to turn over.</li>
-        <li>Servers hosted in multiple countries (Effective georestriction cirumvention may require that you sometimes switch between continents).</li>
+        <li>Absolutely no logging (VPN providers are a favorite target for law-enforcement agencies who suspect that their subscribers may be using a VPN to do illegal things. The only way that a VPN provider cannot be compelled to give up their logs about you to law enforcement is if they don't keep any logs to turn over.</li>
+        <li>Servers hosted in multiple countries (Effective georestriction circumvention may require that you sometimes switch between continents).</li>
         <li>IP and DNS leak protection (You cannot effectivly hide your traffic from your ISP if you are still reaching out to the ISP for domain name resolution)</li>
     </ul>
 
@@ -51,19 +51,19 @@
 
     <h3>How does someone spy on my browsing on a public wifi?</h3>
 
-    <p>All information is sent and received on the internet by exchanging packets between the website's server and the end-user's laptop. Unless the site is using HTTPS, these packets are transmitted in plaintext. With freely available traffic analysis software (such as the ubiquitious Wireshark), it is trivial to intercept or inspect a packet in transit that is being sent on your network. This is known as "packet sniffing". If the contents of those packets are known, a third party within your network can see exactly what websites you're visiting, what queries you're sending to your favorite search engine, and what you're posting on your blog.</p>
+    <p>All information is sent and received on the internet by exchanging packets between the website's server and the end-user's laptop. Unless the site is using HTTPS, these packets are transmitted in plaintext. With freely available traffic analysis software (such as the ubiquitous Wireshark), it is trivial to intercept or inspect a packet in transit that is being sent on your network. This is known as "packet sniffing". If the contents of those packets are known, a third party within your network can see exactly what websites you're visiting, what queries you're sending to your favorite search engine, and what you're posting on your blog.</p>
 
     <h3>Why am I more vulnerable in a coffee shop than at home?</h3>
 
-    <p>It is generally assumed that no one is going to be on your home wifi except for you, your family, and any visting friends that you might have given the wifi password. On a public wifi at a Starbucks, however, you have no idea who else is currently logged in to the network.</p>
-I
+    <p>It is generally assumed that no one is going to be on your home wifi except for you, your family, and any visiting friends that you might have given the wifi password. On a public wifi at a Starbucks, however, you have no idea who else is currently logged in to the network.</p>
+
     <h3>How do I know that my VPN provider isn't spying on me?</h3>
 
-    <p>This is a fundamental problem with VPN's:  you don't. When you decide to run your traffic through a VPN, you are essentially putting a middleman between yourself and your traffic's destination. The VPN provider functions as a courier:  you are putting your packets in the courier's care so that no on else will intercept them, but you are intrinsically trusting the VPN provider not to look at the packets either. If the VPN provider is not trustworthy, this may be no better than running without one. It is up to you to find a VPN provider that you are willing to trust. Even though virtually every VPN provider will claim that they will not inspect your data, it is difficult for them to prove it. VPN providers may enact certain policies to increase that trust, such as a strict no-logging policy.</p>
+    <p>This is a fundamental problem with VPN's:  you don't. When you decide to run your traffic through a VPN, you are essentially putting a middleman between yourself and your traffic's destination. The VPN provider functions as a courier:  you are putting your packets in the courier's care so that no on else will intercept them, but you are intrinsically trusting the VPN provider not to look at the packets either. If the VPN provider is not trustworthy, this may be no better than running without one. It is up to you to find a VPN provider that you are willing to trust. Even though virtually every VPN provider will claim that they will not inspect your data, it is difficult for them to prove it. VPN providers may enact certain policies to increase that trust, such as a strict no-logging policy. Unfortunately, getting a VPN provider to "prove" that they don't keep any logs is easier said than done.</p>
 
     <h3>Should I use a VPN all the time?</h3>
 
-    <p>Using a VPN constantly will depend on what you are trying to achieve. If you're only trying to protect yourself from malicious eavesdroppers at a coffee shop or airport wifi, then you can safely turn off the VPN when you're at home. On the other hand, if your concern is stopping your ISP from spying on your activity, or from sites you visit on the internet knowing your true IP, then using a VPN at all times would be more benificial.</p>
+    <p>Using a VPN constantly will depend on what you are trying to achieve. If you're only trying to protect yourself from malicious eavesdroppers at a coffee shop or airport wifi, then you can safely turn off the VPN when you're at home. On the other hand, if your concern is stopping your ISP from spying on your activity, or from sites you visit on the internet knowing your true IP, then using a VPN at all times would be more beneficial.</p>
 
     <h3>Will a VPN provide complete anonymity online?</h3>
 

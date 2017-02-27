@@ -36,9 +36,10 @@
     <h2>Where to Find a VPN Provider</h2>
 
     <p>Finding the "perfect" VPN is incredibly difficult, if not impossible. All that establishing a private VPN really requires is a remote server and a protocol to establish the secure tunnel from your device to the server. You could even setup your own on a private AWS server if you so desired. The relative ease of setup has inspired many companies to create low-cost VPN solutions as demand has soared. Unfortunately, the lack of standards and accountability limits our ability to objectively rate VPN providers and the integrity of their offerings. The following URL is an independently-maintained list of various VPN providers and their supported features:</p>
-    https://thatoneprivacysite.net/vpn-comparison-chart/
 
-    <p>The above is not the be-all-end-all resource. But thus far, it's the best we've got.</p>
+    <a href="https://thatoneprivacysite.net/vpn-comparison-chart/">VPN Comparison Chart</a>
+
+    <p>The above is not the be-all-end-all resource. But thus far, it's the best we've got. You can also check out some of the recommendations at <a href="https://www.privacytools.io/#vpn">Privacy Tools</a>.</p>
 
     <p>At the bare minimum, any VPN service that you purchase should provide the minimum guarantees:</p>
     <ul>
@@ -51,15 +52,15 @@
 
     <h3>How does someone spy on my browsing on a public wifi?</h3>
 
-    <p>All information is sent and received on the internet by exchanging packets between the website's server and the end-user's laptop. Unless the site is using HTTPS, these packets are transmitted in plaintext. With freely available traffic analysis software (such as the ubiquitous Wireshark), it is trivial to intercept or inspect a packet in transit that is being sent on your network. This is known as "packet sniffing". If the contents of those packets are known, a third party within your network can see exactly what websites you're visiting, what queries you're sending to your favorite search engine, and what you're posting on your blog.</p>
+    <p>All information is sent and received on the internet by exchanging packets between the website's server and the end-user's laptop. Unless the site is using HTTPS, these packets are transmitted in plaintext. With freely available traffic analysis software (such as the ubiquitous Wireshark), it is <a href="https://www.youtube.com/watch?v=r0l_54thSYU">trivial</a> to intercept or inspect a packet in transit that is being sent on your network. This is known as "<a href="https://en.wikipedia.org/wiki/Packet_analyzer">packet sniffing</a>". If the contents of those packets are opened, a third party within your network can see exactly which websites you're visiting, what queries you're sending to your favorite search engine, and what you're posting on your blog. Website credentials, like your username and password, can be captured, too.</p>
 
     <h3>Why am I more vulnerable in a coffee shop than at home?</h3>
 
-    <p>It is generally assumed that no one is going to be on your home wifi except for you, your family, and any visiting friends that you might have given the wifi password. On a public wifi at a Starbucks, however, you have no idea who else is currently logged in to the network.</p>
+    <p>It is generally assumed that no one is going to be on your home wifi except for you, your family, and any visiting friends that you might have given the wifi password. On a public wifi at a Starbucks, however, you have no idea who else is currently logged in to the network. The risk extends to any publicly-accessible network: a library, an airport, a university dorm's wifi, etc.</p>
 
     <h3>How do I know that my VPN provider isn't spying on me?</h3>
 
-    <p>This is a fundamental problem with VPN's:  you don't. When you decide to run your traffic through a VPN, you are essentially putting a middleman between yourself and your traffic's destination. The VPN provider functions as a courier:  you are putting your packets in the courier's care so that no on else will intercept them, but you are intrinsically trusting the VPN provider not to look at the packets either. If the VPN provider is not trustworthy, this may be no better than running without one. It is up to you to find a VPN provider that you are willing to trust. Even though virtually every VPN provider will claim that they will not inspect your data, it is difficult for them to prove it. VPN providers may enact certain policies to increase that trust, such as a strict no-logging policy. Unfortunately, getting a VPN provider to "prove" that they don't keep any logs is easier said than done.</p>
+    <p>This is a fundamental problem with VPN's:  you don't. When you decide to run your traffic through a VPN, you are essentially putting a middleman between yourself and your traffic's destination. The VPN provider functions as a courier:  you put your packets in the courier's care so that no on else will intercept them, but you are intrinsically trusting the VPN provider not to look at the packets, either. If the VPN provider is not trustworthy, this may be no better than running without one. It is up to you to find a VPN provider that you are willing to trust. Even though virtually every VPN provider will claim that they will not inspect your data, it is difficult for them to prove it. VPN providers may enact certain policies to increase that trust, such as a strict no-logging policy. Unfortunately, getting a VPN provider to "prove" that they don't keep any logs is easier said than done.</p>
 
     <h3>Should I use a VPN all the time?</h3>
 
@@ -72,5 +73,9 @@
     <h3>I turned on the VPN, and now this site says that someone logged into my account from overseas!</h3>
 
     <p>Certain websites like Facebook, Gmail, Paypal, etc. have various safeguards that are built-in to try to prevent people from logging in with compromised credentials. Essentially, when you log into Facebook, it keeps track of the IP Address from where you logged in and a rough geolocation corresponding to that IP Address. It uses this to build a profile of 'you' and where you've previously logged in. By doing so, it has a built-in early warning system that can trigger if an IP Address from halfway across the world suddenly logs in using your credentials. For instance, if you have a five-year history of logging into your Facebook exclusively from the georegion around Chicago, and suddenly your account is accessed from an IP Address in India, Facebook will assume that you have been hacked and send you an alert. Facebook has no way of knowing whether that IP is a foreign entity or you logging in through a VPN. And so if you start using a VPN to change your external IP from your hometown of Chicago to a server in the Bahamas, Facebook would similarly trigger an alert when it starts to see you logging in from the Bahamas. This is not necessarily a bad thing, provided you know why it's happening.</p>
+
+    <h2>Additional Resources</h2>
+
+    <a href="http://computer.howstuffworks.com/vpn.htm">How VPNs Work</a>
 </body>
 </html>

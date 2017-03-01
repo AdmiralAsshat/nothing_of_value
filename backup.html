@@ -26,6 +26,10 @@
         <li>Wait, rinse, repeat</li>
     </ol>
 
+    <h2>Make Multiple Backups</h2>
+
+    <h2>Test That You Can Restore From Your Backup</h2>
+
     <h2>Frequently Asked Questions</h2>
 
     <h3>What Should I Be Backing Up?</h3>
@@ -38,13 +42,44 @@
 
     <h3>How Many Backups Should I Make?</h3>
 
+    <p>General best practices for backing up follow the <a href="http://blog.trendmicro.com/trendlabs-security-intelligence/world-backup-day-the-3-2-1-rule/">3-2-1-rule</a>. Simply put, that rule means that for any data you consider important, you should have:</p>
+
+    <ul>
+        <li>At least three copies,</li>
+        <li>In two different formats,</li>
+        <li>with one of those copies off-site.</li>
+    </ul>
+
+    <p>What does "in different formats" mean? It means that that keeping all of your data on magnetic hard-drives is a bad idea, because magnetic hard-drives are all prone to failure. Hence, if your data is stored in your primary computer's hard-drive, and your only backups are on another computer or on an external hard-drive, your backup setup fails the second requirement, because they have all been stored on a single format. Ideally, if one of your backups is an external hard-drive, another backup should be a different kind of media, like a CD/DVD/Blu-Ray. A third piece of media could then be something like a USB flash drive (flash-based memory storage and magnetic disk storage are similar, but since flash media tends to be more resistant to falls and movement, this would work in a pinch).</p>
+
+    <p>Why should one of your backups be off-site? This is for what we call "Disaster Recovery". It doesn't matter if your data is backed up across 50 different pieces of media inside your house:  if your house floods, catches fire, or gets hit by a tornado, your data is still gone. Backing it up to an offsite-location provides resistance to your primary location getting wiped out.</p>
+
     <h3>Manually Backing Stuff Up is Tedious and Time-Consuming. Can I Make it Easier or Automatic?</h3>
 
+    <p>Backing up can easily be automated. I do not recommend automating <strong>all</strong> of your backups, because that would require that all of your backup media be plugged into your computer at all times. If that's the case, whatever wipes out your computer could wipe out your backup as well (e.g. a power surge). Ideally, if you are backing up to an external hard-drive or flash-drive, you should unplug it as soon as you're done and stick it somewhere safe.</p>
+
+    <p>Most operating systems have guides on scheduling backups to automatically happen, once you have configured the files you wish to back up and where you want them to go.
+
+    <ul>
+        <li><a href="https://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/en-us/ntbackup_schedule_backup.mspx?mfr=true">Windows XP</a> (If you're still running Windows XP, please consider getting a newer computer)</li>
+        <li><a href="https://www.cnet.com/how-to/how-to-run-scheduled-backups-in-windows-7/">Windows 7</a></li>
+        <li><a href="https://www.winhelp.us/configure-automatic-backup-in-windows-7.html">Windows 7/8/10</a></li>
+        <li><a href="http://www.wikihow.com/Schedule-an-Automatic-File-Backup-in-a-Mac">OSX / MacOS</a></li>
+        <li><a href="http://www.techradar.com/news/software/applications/linux-backup-the-complete-guide-933134/1">Linux</a>
+    </ul>
+
     <h3>What if I Just Store Everything on a Flash-Drive / External Hard-Drive / The Cloud?</h3>
+
+    <p>The temptation to store everything strictly on external media is understandable, given that it inherently avoids the possibility of data loss due to your computer dying. However, it is important to understand that if your documents are stored <strong>only</strong> on an external, or on Google Drive, or on Dropbox, you haven't really <em>backed them up</em>--you've simply moved where the files live.  Keeping all of your documents on Google Drive may make them accessible from all of your devices and store them 'in the cloud', but if you should lose access to your Google Drive, the files would now be gone.</p>
+
+    <p>Additionally, consider the following:  if you have so many songs, movies, or photos that you are storing them all on an external hard-drive because they are too large to fit on your laptop's hard-drive, you should look into getting a <em>second</em> external hard-drive to be a backup / clone of the first. This is, again, to ensure that you never have any files that are stored in just one place.
 
     <h3>I Put All My Stuff on the Cloud. Is that Safe?</h3>
 
     <h3>How Do I Backup A File That is Frequently Changing?</h3>
 
+    <h2>Resources</h2>
+
+    <a href="http://ims.uthscsa.edu/information_security/documents/Backup.pdf">Backup Guidelines</a>
 </body>
 </html>

@@ -33,18 +33,18 @@
     <ul>
         <li>At least three copies,</li>
         <li>In two different formats,</li>
-        <li>with one of those copies off-site.</li>
+        <li>with one of those copies offsite.</li>
     </ul>
 
     <p>What does "in different formats" mean? It means that that keeping all of your data on magnetic hard-drives is a bad idea, because magnetic hard-drives are all prone to failure. Hence, if your data is stored in your primary computer's hard-drive, and your only backups are on another computer or on an external hard-drive, your backup setup fails the second requirement, because they have all been stored on a single format. Ideally, if one of your backups is an external hard-drive, another backup should be a different kind of media, like a CD/DVD/Blu-Ray. A third piece of media could then be something like a USB flash drive (flash-based memory storage and magnetic disk storage are similar, but since flash media tends to be more resistant to falls and movement, this would work in a pinch).</p>
 
-    <p>Why should one of your backups be off-site? This is for what we call "Disaster Recovery". It doesn't matter if your data is backed up across 50 different pieces of media inside your house:  if your house floods, catches fire, or gets hit by a tornado, your data is still gone. Backing it up to an off-site location provides resistance to your primary location getting wiped out.</p>
+    <p>Why should one of your backups be offsite? This is for what we call "Disaster Recovery". It doesn't matter if your data is backed up across 50 different pieces of media inside your house:  if your house floods, catches fire, or gets hit by a tornado, your data is still gone. Backing it up to an offsite location provides resistance to your primary location getting wiped out.</p>
 
     <h2>Test That You Can Restore From Your Backup</h2>
 
     <p>A common pitfall that results from automating the backup process is that rarely does anyone actually check to see if the backup was successful. The software might <em>say</em> it was successful, but you will never know for sure until you actually try restoring from your backup. Because most people don't check their backups until they're needed, the doomsday scenario--a hard-drive crashes, and upon trying to restore from a backup they discover that the backup is either incomplete or not what they needed--is frighteningly common. </p>
 
-    <p>If you are backing up your files automatically, check the backup destination every so often to confirm that your files are actually there, and that you can read them. If you back up to an external hard-drive, confirm that you can open the files on the external hard-drive and that they work. If you are backing up to an off-site or cloud storage service, confirm that you can pull / restore files from the backup service and that they work. You don't necessarily need to test <strong>every</strong>, just enough of a varied sampling to confirm that the backup is working as intended. A couple of other quick ways you can test that the backup is working as intended:</p>
+    <p>If you are backing up your files automatically, check the backup destination every so often to confirm that your files are actually there, and that you can read them. If you back up to an external hard-drive, confirm that you can open the files on the external hard-drive and that they work. If you are backing up to an offsite or cloud storage service, confirm that you can pull / restore files from the backup service and that they work. You don't necessarily need to test <strong>every</strong>, just enough of a varied sampling to confirm that the backup is working as intended. A couple of other quick ways you can test that the backup is working as intended:</p>
 
     <ul>
         <li>Compare the size of your source directory and your backup. If you have 50 gigs of files on your primary computer that you have set to be backed up, the size of the directory on your backup should be at least 50 gigs. If it's less than that, something is wrong.</li>
@@ -95,9 +95,9 @@
 
     <p>It is important to recognize that "the cloud" is a romanticized term for what essentially means "someone else's server". When you backup your files to Apple, Google, or Amazon's "cloud", the files go to a series of storage racks somewhere in an Apple/Google/Amazon facility. They are still ultimately stored on the same kind of commercial-grade hard-drives that are used in your computer. Put another way, if you simply installed some software onto your computer that made your computer's files accessible to your smartphone, tablet, or laptop from outside of the internal network, you have technically made a "cloud storage" device (this is the idea behind services such as <a href="https://owncloud.org/">ownCloud</a> or <a href="https://nextcloud.com/">Nextcloud</a>). Since cloud storage is still hard-drive-based storage on the backend, it is prone to all of the same problems as conventional HDD storage:  drive failures, bit rot, data loss, etc. Most vendors of cloud storage services will offer some level of redundancy across their drives so that they are less likely to lose your data, but it is still possible.</p>
 
-    <p>Additionally, consider the restoration cost when deciding whether you want to entrust all of your files to cloud storage as your sole backup. If you have a one-terabyte drive that you have backed up to an off-site cloud-storage provider and your drive fails, that means you have to <em>download</em> one terabyte worth of data in order to restore all of your data to the replacement drive. That could take a prohibitive amount of time, not to mention incur possible overage fees with your ISP. An offsite, "cloud" storage backup is an excellent thing to have, but it should not be your <strong>only</strong> form of backup.</p>
+    <p>Additionally, consider the restoration cost when deciding whether you want to entrust all of your files to cloud storage as your sole backup. If you have a one-terabyte drive that you have backed up to an offsite cloud-storage provider and your drive fails, that means you have to <em>download</em> one terabyte worth of data in order to restore all of your data to the replacement drive. That could take a prohibitive amount of time, not to mention incur possible overage fees with your ISP. An offsite, "cloud" storage backup is an excellent thing to have, but it should not be your <strong>only</strong> form of backup.</p>
 
-    <h3>How Do I Backup A File That is Frequently Changing?</h3>
+    <h3>How Do I Backup Multiple Versions of a File?</h3>
 
     <p>If you are trying to backup a file that is being updated on a regular basis (say, a paper or short story), and want to make backups that allow you to cycle between various drafts without having to create "Copy of Copy of Copy of Untitled Document.txt", consider leveraging your operating system's internal file history feature. This makes the operating system keep track of a file's previous versions so that if the file changes, you can revert the file to an earlier version. The idea of "version history" is used heavily within the software industry so that the company can keep track of the many source files that are being constantly edited by all of the company's programmers. This paradigm can be extended to personal files as well. While it will cause your files to take up slightly more space, it is well worth the trade-off for most files (anyone who has ever inadvertently deleted a section of a document and then saved the document before noticing will wish they has this turned on). </p>
 
@@ -107,12 +107,26 @@
     <ul>
         <li><a href="http://www.wikihow.com/Back-Up-Information-Using-File-History-in-Windows-8">Windows</a> (<a href="https://www.howtogeek.com/74623/how-to-use-the-new-file-history-feature-in-windows-8/">Another Guide Here</a>)</li>
         <li><a href="http://www.wikihow.com/Use-Time-Machine">OSX / MacOS</a></li>
-        <li>Linux (No turn-key solution that I can find, everyone running Linux will tell you that you should be able to <em>easily</em> write some <a href="https://en.wikipedia.org/wiki/Rsync">rsync</a> scripts yourself that can do it)</li>
+        <li><a href="https://www.linux.com/learn/total-system-backup-and-recall-deja-dup">Linux</a></li>
     </ul>
 
-    <h3>Where Can I find a Cloud Backup Storage Provider?</h3>
+    <h3>Where Can I find an Offsite / Cloud Backup Storage Provider?</h3>
 
-    <p>You may wish to do your own research when finding a cloud backup provider, as each individual's needs will differ wildly depending on how much data they have to backup and how accessible they need it.</p> For instance, those who have several local back-ups and only require an off-site backup in case of emergencies might look into <a href="https://aws.amazon.com/glacier/">Amazon Glacier</a>, which is relatively cheap as far as what the storage costs. If the data actually needs to be <em>retrieved</em>, however, the price goes up. Cheap options can be found if you have less than a terabyte of data to store. For those with multiple terabytes to store, services like <a href="https://www.backblaze.com/">Backblaze</a>, <a href="https://www.carbonite.com/en/">Carbonite</a>, or <a href="https://www.crashplan.com/en-us/">Crashplan</a> all claim to offer unlimited storage for around $50-$60 per year. Other cloud-storage options that were not designed for backup but can nonetheless be used to backup files include <a href="https://www.google.com/drive/pricing/">Google Drive</a>, <a href="https://www.dropbox.com/plans?trigger=homepagefoot">Dropbox</a>, <a href="https://www.box.com/">Box</a>, and countless others. I do not wish to promote any one service over another--you are encouraged to dig into them and see which will work best for you.</p>
+    <p>You may wish to do your own research when finding a cloud backup provider, as each individual's needs will differ wildly depending on how much data they have to backup and how accessible they need it.</p> For instance, those who have several local back-ups and only require an offsite backup in case of emergencies might look into <a href="https://aws.amazon.com/glacier/">Amazon Glacier</a>, which is relatively cheap as far as what the storage costs. If the data actually needs to be <em>retrieved</em>, however, the price goes up. Cheap options can be found if you have less than a terabyte of data to store. For those with multiple terabytes to store, various services (see below) offer unlimited storage for around $50-$60 per year. Many other sites specialize in cloud-storage, which is primarily designed for sharing media and were not designed for backup, but if you happen to have one, it can nonetheless be used to backup files. I do not wish to promote any one service over another--you are encouraged to dig into them and see which will work best for you. Some of the more popular ones are mentioned below.</p>
+
+    <p>Offsite Backup Services</p>
+    <ul>
+        <li><a href="https://www.backblaze.com/">Backblaze</a></li>
+        <li><a href="https://www.carbonite.com/en/">Carbonite</a></li>
+        <li><a href="https://www.crashplan.com/en-us/">Crashplan</a></li>
+    </ul>
+
+    <p>Cloud Storage Providers</p>
+    <ul>
+        <li><a href="https://www.google.com/drive/pricing/">Google Drive</a></li>
+        <li><a href="https://www.dropbox.com/plans?trigger=homepagefoot">Dropbox</a></li>
+        <li><a href="https://www.box.com/">Box</a></li>
+    </ul>
 
     <p>As far as desirable features, you will want to look for something that offers:</p>
     <ul>

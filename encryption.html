@@ -14,11 +14,54 @@
 
     <h2>When To Use Encryption</h2>
 
+    <p>You should consider encrypting any devices that are frequently transported and hold sensitive data. Depending on the hardware and the operating system it's running, the device can be encrypted with relative ease and with little performance overhead (meaning, you won't really notice). If you are running an up-to-date operating system (OSX / MacOS, Windows 10, iOS, Android 6.0 and above, etc.) and have a relatively recent device, you can probably handle using at least some level of encryption.</p>
+
     <h2>When to NOT Use Encryption</h2>
 
-    <h2>Full-Disk Encryption Versus File-Level Decryption</h2>
+    <p>There may be situations in which encryption is of little to no benefit, or the cons outweigh the pros. These include the following:
+    <ul>
+        <li>The hardware is too old to support a modern operating system where encryption can occur seamlessly.</li>
+        <li>The device is underpowered and encryption may degrade performance considerably.</li>
+        <li>Your device regularly chews through gigabytes of data and maintaining performance is paramount. For instance, someone who does video editing may not find full-disk encryption useful, as they are constantly dumping, altering, and rendering large files. The added overhead from needing to encrypt and decrypt those blocks of data may slow down the rendering process or transfer process from large files to external storage.</li> 
+        <li>Your device holds no absolutely no sensitive data or documents. This could include a computer used only for light internet browsing, gaming, etc.</li>
+        <li>If you do not feel that you will be able to remember your decryption password.</li>
+    </ul>
+
+    <p>Unfortunately, once you make the decision to encrypt your device, you open yourself to the risk that you may forget the password. If that happens, your files are locked away forever--there is no "Forgot My Password" option for disk-level decryption. No one has the key but you. So take care to remember it or write it down and keep it somewhere safe. If your device already has files on it, you should make sure that you have everything important backed up before you decide to encrypt it.</p>
+
+    <h2>Full-Disk Encryption Versus File-Level Encryption</h2>
+
+    <p>The term "Full-Disk Encryption" ("FDE" for short) refers to encrypting the entire hard-drive (or at least, everything that isn't necessary to boot the device). When a device is fully encrypted, it must be decrypted before the operating system will even load. If the password is entered incorrectly or the drive fails to decrypt, the loading process stops there:  you won't even make it to the Windows/Apple/Ubuntu logo. If a laptop carried a normal, unencrypted hard-drive with Windows installed on it, a thief who has the laptop would not be able to login to Windows without your password. However, the thief could easily remove the hard-drive from the laptop and mount it as an external drive on another computer, which would allow him to inspect the contents of the drive and look at your My Documents folder without needing a password. If the same thing were attempted with a drive that had been encrypted, the thief would need to know the decryption key/password in order to be able to inspect the files on the drive. Otherwise, all he would see would be blocks of random or gibberish data.</p>
+
+    <p>File-Level Encryption refers to only encrypting individual files that may be sensitive or important. For instance, if your laptop is just a Netflix/light-browsing/light-gaming machine <strong>except for</strong> a handful of tax/student loan/medical documents, you may wish to consider just encrypting those documents instead of encrypting the entire drive. Encrypting on an individual file level has some disadvantages, namely that you leave the metadata of the encrypted files exposed. A malicious individual who peers into your My Documents folder might not be able to open your tax documents, but he would still see that you have them; this could encourage him to copy them anyway, even in encrypted format, to try his hand at password cracking later. For a slightly more embarrassing example, encrypting your Porn folder would stop someone from viewing the videos, but they would still be able to see the files themselves and their salacious filenames.</p>
 
     <h2>Encrypting Your Desktop or Laptop Computer</h2>
+
+    <p>There are multiple methods for encrypting your desktop computer, including tools built into the operating system and third-party tools. In general, the first-party tools (i.e. those provided with the operating system) require less work to setup. However, for the truly paranoid, you might not wish to trust Apple or Microsoft to encrypt your data such that they could not be compelled by a three-letter agency to decrypt it without your consent. In which case, you may wish to rely on a third-party tool like TrueCrypt or VeraCrypt.</p>
+
+    <p>Listed below are some of the encryption tools available for each of the major operating systems. Stock tools provided by the OS are listed first, then third party and cross-platform tools.</p>
+
+    <p>First Party Full-Disk Encryption Tools:</p>
+
+    <ul>
+        <li>OSX / MacOS: <a href="https://support.apple.com/en-us/HT204837">FileVault</a></li>
+        <li>Windows: <a href="https://www.howtogeek.com/192894/how-to-set-up-bitlocker-encryption-on-windows/">Bitlocker</a> (Windows Vista 7 / 8 / 10 Pro & Enterprise; unfortunately not available if you are using the Home Edition)</li>
+        <li>Linux: Most modern Debian/Ubuntu/Fedora/Arch distros offer <a href="https://en.wikipedia.org/wiki/Linux_Unified_Key_Setup">LUKS</a> as an option during installation. <a href="https://gitlab.com/cryptsetup/cryptsetup/blob/master/README.md">Cryptsetup</a> can be manually configred if not.</li>
+        <li>ChromeOS: Your chromebook is encrypted by default. No extra setup needed.</li>
+    </ul>
+
+    <p>Third Party Full-Disk Encryption Tools:</p>
+    <ul>
+        <li><a href="https://en.wikipedia.org/wiki/TrueCrypt">TrueCrypt</a> (Mac / Win / Linux) (<strong>WARNING:</strong> No longer maintained. Recommended to use one of its successors instead)</li>
+        <li><a href="https://veracrypt.codeplex.com/">VeryCrypt</a> (Mac / Win / Linux)</li>
+    </ul>
+
+    <p>Third Party File Encryption Tools</p>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
 
     <h2>Encrypting Your Phone or Tablet</h2>
 

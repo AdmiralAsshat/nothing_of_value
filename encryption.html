@@ -79,22 +79,62 @@
 
     <h2>Encrypting Your Phone or Tablet</h2>
 
+    <p>If you have an iPhone, encryption should be supported out-of-the-box. In fact, if you have a passcode setup on your iPhone, chances are the device is already encrypted.</p>
+
+    <p>For Android devices, encryption is supported, but not on by default unless you have a handful of devices (usually of the Nexus or Pixel line). Depending on your hardware and the version of Android you are running, encryption may or may not be feasible. While encryption was available, it was not until Android 6.0 that the operating system leveraged hardware-accelerated encryption provided by the processor, meaning it was all done in software. This resulted in sizable overhead that made the performance of the device degrade over time.</p>
+
+    <p>Low or Mid-Range devices running Android 5.0 (Lollipop) or older: Encryption is still possible, but it may slow down your advice.</p>
+
+    <p>Mid-range or High-end devices running Android 6.0 (Marshmallow) or newer: Encryption can safely be enabled with little to no performance overhead.</p>
+
+    <p>Note that after you decide to encrypt your Android device, you will <strong>not</strong> be able to disable the lock screen on the phone/tablet. The passcode that is set serves as part of the key for the encryption process, and so it cannot be removed without disabling the encryption. Note as well that once a device is encryption, you cannot permanently decrypt it without wiping the device.</p>
+
+    <ul>
+        <li>iOS: When setting up your device, make sure that a passcode is set. On iOS 8 or later, this should encrypt the entire device.</li>
+        <li>Android: Settings -> Security -> Device Content Encryption</li>
+    </ul>
+
     <p></p>
 
     <h2>Frequently Asked Questions</h2>
 
     <h3>Why Can't I Just Lock My Computer Behind a Password?</h3>
 
+    <p>Setting a password on the computer prevents someone from logging into the computer and accessing your files through the installed operating sytem (Windows, Mac, Linux, etc). However, it does not stop someone from removing the hard-drive from the computer and using another computer to view the contents. If the hard-drive's partition is not encrypted, someone could simply plug the hard-drive into another computer and mount the stolen hard-drive from your computer--it would show up as a browsable media peripheral like any other DVD, flash drive, or external hard-drive. At that point, your files would be freely accessible. If the drive were encrypted, however, and the thief did not know the password to properly decrypt it, the drive's contents would look like scrambled or random bits of data.</p>
+
     <h3>What If I Forget My Encryption Password?</h3>
+
+    <p>Encryption is a one-way process. Once something has been encrypted, you require the original that was used to encrypt it in order to decrypt it. In most cases, this 'key' is a string or password (it can also be a file). If you do not have the key, it cannot be decrypted. Period. For this reason, you should probably keep a backup of your keyfile or passphrase somewhere.</p>
+
+    <p>If you make use of OSX / macOS's built-in FileVault feature, you can choose to upload a backup of the key to Apple so that it can be retrieved in case you ever forget it.</p>
+
+    <p>If you make use of Bitlocker, you have an option of using the Trusted Platform Module to derive a key instead of the usual PIN or passphrase. In this setup, Windows uses your computer's hardware profile to create the key. This makes the encryption process transparent to the end-user, and you will not need to manually decrypt the volume every time the computer is turned on, but Windows will still give you a Recovery Key that you should hold onto. Additionally, you can choose to tie it to your Microsoft account, and upload a backup of the key to Microsoft so that it can be retrieved in case you ever forget it.</p>
 
     <h2>Additional Considerations</h2>
 
     <h3>Bitlocker: Be Careful When Updating the BIOS</h3>
 
+    <p>Most people don't update the BIOS for kicks, but if your computer manufacturer tells you that there's a BIOS update available for your desktop or laptop, you should probably update it. Be aware, however, that if you update the BIOS, you will <strong>more than likely</strong> be prompted for your Bitlocker Recovery Key after the computer restarts. This is because the TPM checks the BIOS and the Master Boot Record (MBR) before decrypting to ensure that the device hasn't been tampered with. If it detects a change, it will request the Recovery Key before continuing with booting. While it is unlikely you will ever update the BIOS on your computer more than once or twice, simply be aware that you should have the Recovery Key handy if you have Bitlocker enabled.</p>
+
     <h3>Bitlocker: Do You Trust Microsoft With Your Bitlocker Key?</h3>
+
+    <p>Your concern here about whether Microsoft should be trusted with your backup Recovery Key depends largely on your level of paranoia and your threat model. If your primary reason for encrypting your laptop is to mitigate damage in case of loss or theft, Microsoft is probably a safe place to backup your key.</p>
+
+    <p>If you are encrypting your laptop because you believe a state actor or a three-letter agency is after you, however, giving Microsoft a copy of your key may not be the best idea. While the risk is largely theoretical at this point, it is known that Microsoft was part of <a href="https://en.wikipedia.org/wiki/PRISM_(surveillance_program)#Extent_of_the_program">PRISM</a>, including <a href="http://cryptome.org/2014/11/ms-onedrive-nsa-prism.htm">SkyDrive</a>, where the backup key is stored. They have co-operated with law enforcement in the past to turn over data about their users when compelled by court order. It is thus not unreasonable to assume that if a law enforcement agency siezed your Bitlocker-encrypted computer and wishes to decrypt it, they might compel Microsoft to provide the backup Recovery Key that you uploaded to them.</p>
 
     <h3>FileVault: Do You Trust Apple With Your FileVault Key?</h3>
 
+    <p>Trusting Apple with your FileVault key presents the same concern as trusting Microsoft:  do you believe that Apple would refuse to provide law enforcement with the backup of your FileVault key if compelled to do so by a court order? While Apple has historically resisted attempts to help the FBI and other agencies defeat decryption, they have done so by architecturing the device such that they <em>cannot</em> decrypt it--so that the answer is "We can't." instead of "We won't." If they are storing your backup Filevault Key, however, they very much <em>can</em> and probably <em>must</em> turn it over to law enforcement, if compelled.</p>
+
+    <p>If your threat model does not include the government, however, giving Apple a backup of your key could be useful if your copy is lost or forgotten.</p>
+
     <h3>Encrypt Your Backups</h3>
+
+    <p>If it is paramount that your sensitive data be encrypted, you should take special care to make sure that all of your backups are encrypted, too. Otherwise, someone who is unable to break into your main computer need only find the unencrypted external hard-drive you have lying around nearby in order to access all of the backed up files in plain view.</p>
+
+    <p>For certain situations, you may wish to not encrypt your external storage if it contains nothing sensitive (e.g. an external hard-drive containing nothing but photos, videos, or music). In that case, you may wish to separate the sensitive from non-sensitive files onto separate drives and encrypt the sensitive drive. Or, you may wish to fall back onto file-level encryption tools to only encrypt sensitive files on the backup device.</p>
+
+    <p>If you are backing up to an offsite or cloud-based system, you may wish to check with the storage provider to see what their policy is regarding whether the data is stored encrypted and, if so, how. For services like Google Drive, Microsoft OneDrive, Dropbox, etc., you may wish to consider encrypting the file yourself before uploading it to the backup service so that you don't have to trust their word on it being encrypted.</p>
+
 </body>
 </html>

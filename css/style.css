@@ -1,22 +1,22 @@
-/*Headings*/
+/* Headings */
 h1,h2,h3 {
     text-align: center;
     line-height: 1.2;
 }
 
-/*Main Content*/
-
+/* Main Content */
 body {
 
-    margin:40px auto;
-    max-width:650px;
-    line-height:1.6;
-    font-size:18px;
-    color:#444;
-    padding:0
+    margin: 40px auto;
+    max-width: 800px; 
+    line-height: 1.6;
+    font-size: 18px;
+    color: rgba(255,255,255,.95);
+    background-color: rgba(0,102,255,0.87);
+    padding: 0
 }
 
-/*Tables*/
+/* Tables */
 table, th, td {
         border: 1px solid black;
         border-collapse: collapse;
@@ -26,3 +26,48 @@ table, th, td {
         padding: 5px;
         text-align: left
     }
+
+/* Definition Display */
+/* Credit to : */
+/* https://github.com/you-dont-need/You-Dont-Need-JavaScript#info-on-hover-popover */
+dfn {
+  background: #e9e9e9;
+  border-bottom: dashed 1px rgba(0,0,0,0.8);
+  padding: 0 0.4em;
+  cursor: help;
+  font-style: normal;
+  position: relative;
+  
+}
+dfn::after {
+  content: attr(data-info);
+  display: inline;
+  position: absolute;
+  top: 22px; left: 0;
+  opacity: 0;
+  width: 230px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.5em;
+  padding: 0.5em 0.8em;
+  background: rgba(0,0,0,0.8);
+  color: #fff;
+  pointer-events: none; /* This prevents the box from apearing when hovered. */
+  transition: opacity 250ms, top 250ms;
+}
+dfn::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 12px; left: 20px;
+  opacity: 0;
+  width: 0; height: 0;
+  border: solid transparent 5px;
+  border-bottom-color: rgba(0,0,0,0.8);
+  transition: opacity 250ms, top 250ms;
+}
+dfn:hover {z-index: 2;} /* Keeps the info boxes on top of other elements */
+dfn:hover::after,
+dfn:hover::before {opacity: 1;}
+dfn:hover::after {top: 30px;}
+dfn:hover::before {top: 20px;}

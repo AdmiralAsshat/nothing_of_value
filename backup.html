@@ -7,12 +7,15 @@
     <link rel="stylesheet" href="css/style.css"">
 </head>
 <body>
+    <header><section>
     <p><h1>You Need a Backup</h1></p>
 
     <p>Your data is valuable. Too valuable to keep all in one place. Unlike physical media, the process of making a copy of your data is not an expensive or laborious process. On the contrary, the mere fact that it exists digitally allows you to make nearly infinite copies at a fraction of the time it would take to physically xerox a document.</p>
 
     <p>Regrettably, while your digital document could theoretically last forever, the media on which it's stored will not. Your hard-drive will eventually fail, your floppy-disk will refuse to read, even your CD's and DVD's may one day suffer from <a href="https://en.wikipedia.org/wiki/Disc_rot">disc rot</a>. If all of your data is stored in one place, it is all but guaranteed that you will one day lose it. The only way to mitigate against this is to make a backup of your data:  that is, store it wherever it is you're currently storing it (your phone, your laptop, your flash drive, etc.), and then store it <strong>somewhere else</strong>. In this way, you have a "redundant" source for your data, should the first one suffer some misfortune.</p>
+    </section></header>
 
+    <section>
     <h2>How to Back Up Your Data</h2>
 
     <p>At its most basic, making a backup just means copying your data from wherever it normally resides to somewhere else. It could be as simple as buying a sufficiently large USB flash drive and copying everything important onto it (assuming it is large enough). This would be a quick-and-dirty backup, which would be less than ideal, but it would be better than nothing.</p>
@@ -25,7 +28,9 @@
         <li>Copy the selected files to your destination</li>
         <li>Wait, rinse, repeat</li>
     </ol>
+    </section>
 
+    <section>
     <h2>Make Multiple Backups</h2>
 
     <p>General best practices for backing up follow the <a href="http://blog.trendmicro.com/trendlabs-security-intelligence/world-backup-day-the-3-2-1-rule/">3-2-1-rule</a>. Simply put, that rule means that for any data you consider important, you should have:</p>
@@ -39,7 +44,9 @@
     <p>What does "in different formats" mean? It means that that keeping all of your data on magnetic hard-drives is a bad idea, because magnetic hard-drives are all prone to failure. Hence, if your data is stored in your primary computer's hard-drive, and your only backups are on another computer or on an external hard-drive, your backup setup fails the second requirement, because they have all been stored on a single format. Ideally, if one of your backups is an external hard-drive, another backup should be a different kind of media, like a CD/DVD/Blu-Ray. A third piece of media could then be something like a USB flash drive (flash-based memory storage and magnetic disk storage are similar, but since flash media tends to be more resistant to falls and movement, this would work in a pinch).</p>
 
     <p>Why should one of your backups be offsite? This is for what we call "Disaster Recovery". It doesn't matter if your data is backed up across 50 different pieces of media inside your house:  if your house floods, catches fire, or gets hit by a tornado, your data is still gone. Backing it up to an offsite location provides resistance to your primary location getting wiped out.</p>
+    </section>
 
+    <section>
     <h2>Test That You Can Restore From Your Backup</h2>
 
     <p>A common pitfall that results from automating the backup process is that rarely does anyone actually check to see if the backup was successful. The software might <em>say</em> it was successful, but you will never know for sure until you actually try restoring from your backup. Because most people don't check their backups until they're needed, the doomsday scenario--a hard-drive crashes, and upon trying to restore from a backup they discover that the backup is either incomplete or not what they needed--is frighteningly common. </p>
@@ -50,11 +57,15 @@
         <li>Compare the size of your source directory and your backup. If you have 50 gigs of files on your primary computer that you have set to be backed up, the size of the directory on your backup should be at least 50 gigs. If it's less than that, something is wrong.</li>
         <li>Grab a few files from the backup and confirm that they are the same size as they are on the original device. If they're different sizes, it means the backup is modifying them in some way--that's not good.</li>
     </ul>
+    </section>
 
+    <section>
     <h2>Don't Back Up To the Same Place As Your Original Data</h2>
 
     <p>This should go without saying, given our original directive that a 'backup' should be defined as your data being stored <strong>somewhere else</strong>, but I have seen this happen enough that it bears special mention:  do not backup your data to the same device where your original data is housed. That is to say, if you are backing up your computer's My Documents folder, don't just create a copy somewhere else on the same hard-drive. If the hard-drive fails, both the original folder and the backup folder would be inaccessible, meaning your documents would still be gone. Some people periodically make copies of files or folders before they make changes to it so that they have a quick-and-dirty copy they can restore from if something horrible happens to the original file. This is fine--but it should not be considered a reliable 'backup'. </p>
+    </section>
 
+    <section>
     <h2>Frequently Asked Questions</h2>
 
     <h3>What Should I Be Backing Up?</h3>
@@ -67,7 +78,7 @@
 
     <h3>How Many Backups Should I Make?</h3>
 
-    <p>See the section Make Multiple Backups.
+    <p>See the section Make Multiple Backups.</p>
 
     <h3>Manually Backing Stuff Up is Tedious and Time-Consuming. Can I Make it Easier or Automatic?</h3>
 
@@ -75,21 +86,21 @@
 
     <p>The entire process of backing up can easily be automated. I do not recommend automating <strong>all</strong> of your backups, because that would require that all of your backup media be plugged into your computer at all times. If that's the case, whatever wipes out your computer could wipe out your backup as well (e.g. a power surge). Ideally, if you are backing up to an external hard-drive or flash-drive, you should unplug it as soon as you're done and stick it somewhere safe.</p>
 
-    <p>Most operating systems have guides on scheduling backups to automatically happen, once you have configured the files you wish to back up and where you want them to go.
+    <p>Most operating systems have guides on scheduling backups to automatically happen, once you have configured the files you wish to back up and where you want them to go.</p>
 
     <ul>
         <li><a href="https://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/en-us/ntbackup_schedule_backup.mspx?mfr=true">Windows XP</a> (If you're still running Windows XP, please consider getting a newer computer)</li>
         <li><a href="https://www.cnet.com/how-to/how-to-run-scheduled-backups-in-windows-7/">Windows 7</a></li>
         <li><a href="https://www.winhelp.us/configure-automatic-backup-in-windows-7.html">Windows 7/8/10</a></li>
         <li><a href="http://www.wikihow.com/Schedule-an-Automatic-File-Backup-in-a-Mac">OSX / MacOS</a></li>
-        <li><a href="http://www.techradar.com/news/software/applications/linux-backup-the-complete-guide-933134/1">Linux</a>
+        <li><a href="http://www.techradar.com/news/software/applications/linux-backup-the-complete-guide-933134/1">Linux</a></li>
     </ul>
 
     <h3>What if I Just Store Everything on a Flash-Drive / External Hard-Drive / The Cloud?</h3>
 
     <p>The temptation to store everything strictly on external media is understandable, given that it inherently avoids the possibility of data loss due to your computer dying. However, it is important to understand that if your documents are stored <strong>only</strong> on an external, or on Google Drive, or on Dropbox, you haven't really <em>backed them up</em>--you've simply moved where the files live.  Keeping all of your documents on Google Drive may make them accessible from all of your devices and store them 'in the cloud', but if you should lose access to your Google Drive, the files would now be gone.</p>
 
-    <p>Additionally, consider the following:  if you have so many songs, movies, or photos that you are storing them all on an external hard-drive because they are too large to fit on your laptop's hard-drive, you should look into getting a <em>second</em> external hard-drive to be a backup / clone of the first. This is, again, to ensure that you never have any files that are stored in just one place.
+    <p>Additionally, consider the following:  if you have so many songs, movies, or photos that you are storing them all on an external hard-drive because they are too large to fit on your laptop's hard-drive, you should look into getting a <em>second</em> external hard-drive to be a backup / clone of the first. This is, again, to ensure that you never have any files that are stored in just one place.</p>
 
     <h3>I Put All My Stuff on the Cloud. Is that Safe?</h3>
 
@@ -144,9 +155,24 @@
     <p>Some backup services might advertise an always-running, "continuous" backup that will instantly detect any new or changed files on your system and start backing up those changes to the cloud storage. This feature may be useful to ensure that your backups are always current with your source data, but if the backup solution does not support file versioning, this can actually cause more harm than good. Consider the following scenario:  if you inadvertently delete a file and subsequently cannot get it back from the Recycle Bin, your first instinct might be to retrieve it from the backup service. However, if your backup service is "continuous" and does not hang on to deleted files or onto previous versions of a file, the deletion may have already replicated to your backup and removed the file from there as well by the time you go to retrieve it. In an even worse scenario, consider what might happen if your computer is infected with ransomware and all of your files are scrambled / encrypted. If you do not immediately detect that the ransomware has encrypted your files and your computer is still able to run programs, the backup software running in the background might replicate all of the encrypted files over to your backup storage and overwrite them with the scrambled versions of the files.</p>
 
     <p>For this reason, some people do not even consider a real-time data replication/mirroring service to be a real "backup" because any damage that occurs to the source files would be quickly passed on to the backup files, thereby negating their usefulness. If your backup solution does not natively support file history, consider creating your own 'rotating' backups (e.g. Backup from One Week Ago, Backup From Two Weeks Ago, etc.), so that you have more than one possible version of the data to use for restoration.</p>
+    </section>
 
-    <h2>Resources</h2>
+    <section>
+    <h2>Additonal Resources</h2>
 
     <a href="http://ims.uthscsa.edu/information_security/documents/Backup.pdf">Backup Guidelines</a>
+    </section>
+
+    <footer><section>
+    <h2>Summary</h2>
+
+    <ul>
+        <li>Backup all important documents, pictures, songs, etc.</li>
+        <li>Use the <strong>3-2-1</strong> rule for backing up:  at least three copies of the data, at least two different storage mediums, at least one copy off-site.</li>
+        <li>Keep one back-up easily accesible for quick recovery, keep another off-site in case your house burns down.</li>
+        <li>Backups can be scheduled to happen automatically.</li>
+    </ul>
+    </section></footer>
+    
 </body>
 </html>

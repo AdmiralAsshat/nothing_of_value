@@ -8,10 +8,13 @@
 </head>
 <body>
 
+<header><section>
 <h1>You Need to Turn On Two-Factor Authentication</h1>
 
 <p>Passwords are an inherently weak form of authentication. Those that are easy for you to guess are also easy for others to guess, making them unsuitable for strong security. Those that <em>are</em> strong enough to be "secure" are difficult to remember, making them unsuitable, too. In addition, we know that even a "perfect" password can be leaked--through no fault of your own--because the database where it was stored was breached. Rather than trusting the safety of your information to a single password, you can add an additional layer of security to your account by turning on two-factor authentication.</p>
+</section></header>
 
+<section>
 <h2>Multi-Factor Authentication</h2>
 
 <p><a href="https://en.wikipedia.org/wiki/Multi-factor_authentication">Multi-factor authentication</a> is based on the idea that one piece of identifying information should not be enough to gain access. Instead, it requires two or more from the following categories:</p>
@@ -23,13 +26,17 @@
 </ul>
 
 <p>The idea of multi-factor authentication is nothing new. Federal workers and other people who deal with highly sensitive information are no-doubt familiar with something like an <a href="https://upload.wikimedia.org/wikipedia/commons/8/8f/SecureID_token_new.JPG">RSA Token</a>, which they pull out of their pocket whenever they need to login. The RSA token is a hardware-backed token generator that constantly produces pseudorandom numbers. The system that has been paired with that token accepts the numbers and is able to determine that you are in possession of the device.</p>
+</section>
 
+<section>
 <h2>Two-Factor Authentication</h2>
 
 <p>Two-factor authentication is a subset of multi-factor authentication, specifically requiring that you have two from the above three categories. It has become increasingly popular in recent years due to the rise of smartphones, which can act as a second factor in the Something You Have category. Because it is assumed that only you should have your smartphone on you at any given time, sites can leverage this and prevent someone from logging into your account unless you have your smartphone on you to receive the second-factor authentication token. With two-factor authentication ("2FA" for short) enabled, whenever you attempt to login to a website, you will be given a second prompt <strong>after</strong> you have successfully entered your password. This prompt will be for the 2FA token, typically a string or number about six characters in length. So long as your smartphone (or dumb-phone) is able to receive text messages, at that point you would receive a text message from the website containing the 2FA string that you need to enter. This ensures that only you, the person currently holding your phone, is able to complete the login process. If your password were compromised and leaked, someone in China who uses your password would be able to complete the first stage of the login process, but they would not be able to get the 2FA token without having your phone.</p>
 
 <p>If you don't trust your smartphone to be on you at all times and safe from prying eyes, you can rely on a physical token like a <a href="https://www.yubico.com/why-yubico/for-individuals/">Yubikey</a> or any <a href="https://www.u2fzero.com/">other</a> certified U2F (Universal 2nd-Factor Authentication) device. Additionally, SMS 2FA tokens are slightly less secure than other options discussed below, and so if you have a smartphone, you may wish to install a code generator app instead.</p>
+</section>
 
+<section>
 <h2>Frequently Asked Questions</h2>
 
 <h3>How Do I Turn On Two-Factor Authentication?</h3>
@@ -57,9 +64,9 @@
 <p>For a comparison of 2FA apps, you may wish to give <a href="http://lifehacker.com/which-form-of-two-factor-authentication-should-i-use-1784769336">this page</a> and <a href="http://lifehacker.com/the-best-two-factor-authentication-app-for-android-1638791349">this one</a> a look. Find one that works for you. Some of the most popular include:</p>
 <ul>
     <li><a href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en">Google Authenticator</a></li>
-    <li><a href="https://www.authy.com/">Authy</a>
-    <li><a href="https://play.google.com/store/apps/details?id=org.fedorahosted.freeotp">FreeOTP</a> (The only FOSS option here, if that's important to you)
-    <li><a href="https://play.google.com/store/apps/details?id=com.lastpass.authenticator">LastPass Authenticator</a> (Distinct from LastPass the password manager)
+    <li><a href="https://www.authy.com/">Authy</a></li>
+    <li><a href="https://play.google.com/store/apps/details?id=org.fedorahosted.freeotp">FreeOTP</a> (The only FOSS option here, if that's important to you)</li>
+    <li><a href="https://play.google.com/store/apps/details?id=com.lastpass.authenticator">LastPass Authenticator</a> (Distinct from LastPass the password manager)</li>
 </ul>
 
 <p>From experience, if you are in the habit of changing out your phone on a semi-regular basis, you may wish to <strong>avoid</strong> Google Authenticator for now. It does not have an easy way of migrating your tokens over to another device if you get a new cell-phone. In effect, this means that if you change phones, you may have to disable 2FA on each service before re-enabling it on the new phone in order to completely 'migrate' devices. Failing to do this can result in you being locked out of your own connected account, making it somewhat of a pain, particularly if you have 2FA turned on across many services. Authy has the ability to authorize more than one device to receive tokens, making migration easier. Other competing products may support this as well.</p>
@@ -67,6 +74,15 @@
 <h3>What if I Want to Use a Hardware Key?</h3>
 
 <p>The <a href="https://www.yubico.com/">Yubikey</a> is the current industry standard used by most software companies, although older <a href="https://www.amazon.com/RSA-SecurID-SID700-hardware-token/dp/B000MW4228/">RSA SecurID tokens</a> are still used heavily in government fields, and work just fine. Yubikeys are well-regarded for their extensive support of the various protocols and integrations with devices (some varieties contain NFC chips so that you can authenticate by simply pressing it against your Android phone instead of requiring a micro-USB adapter to plug it in), but are somewhat expensive and <a href="https://plus.google.com/+KonstantinRyabitsev/posts/4a7RNxtt7vy">not fully open-source</a>, which may turn off FOSS-enthusiasts or the truly paranoid. If either of these pose concerns for you, I advise you to seek out <a href="https://www.amazon.com/s/ref=nb_sb_ss_c_1_4?url=search-alias%3Dcomputers&field-keywords=fido+u2f+security+key&sprefix=fido%2Ccomputers%2C181&crid=2GKSEHA6RJ0LC">alternatives</a> that may be cheaper or better conform to your security needs. Any device you pick should follow the <a href="https://en.wikipedia.org/wiki/Universal_2nd_Factor">U2F standard</a> in order to ensure compatibility with your various services and the integrity of the generated token.</p>
+
+<footer><section>
+<h2>Summary</h2>
+<ul>
+    <li>Turn on Two-Factor Authentication for all important online accounts.</li>
+    <li>SMS for receiving 2FA tokens is less secure than the TOTP protocol used by apps like Google Authenticator or Authy. Use the apps whenever possible.</li>
+    <li>If you frequently migrate or power-wash your devices, consider an Authenticator app that can easily migrate codes between devices.</li>
+</ul>
+</section></footer>
 
 </body>
 </html>

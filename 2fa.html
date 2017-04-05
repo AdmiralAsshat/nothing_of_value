@@ -8,13 +8,31 @@
 </head>
 <body>
 
-<header><section>
+<header><section id="top">
 <h1>You Need to Turn On Two-Factor Authentication</h1>
 
 <p>Passwords are an inherently weak form of authentication. Those that are easy for you to guess are also easy for others to guess, making them unsuitable for strong security. Those that <em>are</em> strong enough to be "secure" are difficult to remember, making them unsuitable, too. In addition, we know that even a "perfect" password can be leaked--through no fault of your own--because the database where it was stored was breached. Rather than trusting the safety of your information to a single password, you can add an additional layer of security to your account by turning on two-factor authentication.</p>
 </section></header>
 
-<section>
+<section id="toc">
+<h2>Table of Contents</h2>
+<ol>
+    <li><a href="#multi_factor">Multi-Factor Authentication</a></li>
+    <li><a href="#two_factor">Two-Factor Authentication</a></li>
+    <li><a href="#faq">Frequently Asked Questions</a></li>
+    <ol type="i">
+        <li><a href="#how_to_enable">How Do I Turn On Two-Factor Authentication?</a></li>
+        <li><a href="#where_to_enable">Where Should I Enable 2FA?</a></li>
+        <li><a href="#now_what">So Now That I Have it Turned On, I Have to Wait to Receive an SMS Code Whenever I Sign In?</a></li>
+        <li><a href="#no_signal">What if I Lose My Phone or Can't Get Enough Signal to Receive the SMS?</a></li>
+        <li><a href="#sms_vs_totp">Why is a TOTP/Token-Generator App Preferred Over SMS?</a></li>
+        <li><a href="#hardware">What if I Want to Use a Hardware Key?</a></li>
+    </ol>
+    <li><a href="#summary">Summary</a></li>
+</ol>
+</section>
+
+<section id="multi_factor">
 <h2>Multi-Factor Authentication</h2>
 
 <p><a href="https://en.wikipedia.org/wiki/Multi-factor_authentication">Multi-factor authentication</a> is based on the idea that one piece of identifying information should not be enough to gain access. Instead, it requires two or more from the following categories:</p>
@@ -28,7 +46,7 @@
 <p>The idea of multi-factor authentication is nothing new. Federal workers and other people who deal with highly sensitive information are no-doubt familiar with something like an <a href="https://upload.wikimedia.org/wikipedia/commons/8/8f/SecureID_token_new.JPG">RSA Token</a>, which they pull out of their pocket whenever they need to login. The RSA token is a hardware-backed token generator that constantly produces pseudorandom numbers. The system that has been paired with that token accepts the numbers and is able to determine that you are in possession of the device.</p>
 </section>
 
-<section>
+<section id="two_factor">
 <h2>Two-Factor Authentication</h2>
 
 <p>Two-factor authentication is a subset of multi-factor authentication, specifically requiring that you have two from the above three categories. It has become increasingly popular in recent years due to the rise of smartphones, which can act as a second factor in the Something You Have category. Because it is assumed that only you should have your smartphone on you at any given time, sites can leverage this and prevent someone from logging into your account unless you have your smartphone on you to receive the second-factor authentication token. With two-factor authentication ("2FA" for short) enabled, whenever you attempt to login to a website, you will be given a second prompt <strong>after</strong> you have successfully entered your password. This prompt will be for the 2FA token, typically a string or number about six characters in length. So long as your smartphone (or dumb-phone) is able to receive text messages, at that point you would receive a text message from the website containing the 2FA string that you need to enter. This ensures that only you, the person currently holding your phone, is able to complete the login process. If your password were compromised and leaked, someone in China who uses your password would be able to complete the first stage of the login process, but they would not be able to get the 2FA token without having your phone.</p>
@@ -36,27 +54,36 @@
 <p>If you don't trust your smartphone to be on you at all times and safe from prying eyes, you can rely on a physical token like a <a href="https://www.yubico.com/why-yubico/for-individuals/">Yubikey</a> or any <a href="https://www.u2fzero.com/">other</a> certified U2F (Universal 2nd-Factor Authentication) device. Additionally, SMS 2FA tokens are slightly less secure than other options discussed below, and so if you have a smartphone, you may wish to install a code generator app instead.</p>
 </section>
 
-<section>
+<section id="faq">
 <h2>Frequently Asked Questions</h2>
 
+<div id="how_to_enable">
 <h3>How Do I Turn On Two-Factor Authentication?</h3>
 
 <p>The websites or services you use have to support it, so their website will be the best place to look in order to get information about how to turn it on. It will generally be somewhere under your Acccount -> Security or Sign-In settings.<a href="http://lifehacker.com/5938565/heres-everywhere-you-should-enable-two-factor-authentication-right-now">This page</a> will give you some quick links to the pages for enabling 2FA on the most popular supported services like Gmail, AppleID, Facebook, Twitter, etc. <a href="https://blog.codinghorror.com/make-your-email-hacker-proof/">This page</a> contains a Gmail-specific tutorial.</p>
+</div>
 
+<div id="where_to_enable">
 <h3>Where Should I Enable 2FA?</h3>
 
 <p>Everywhere that you can. Seriously. Anywhere that hosts an e-mail inbox for you. Anywhere that is connected to your credit card. Anywhere that can cause damage if your account gets compromised. An extensive list of sites that support 2FA is available at <a href="https://twofactorauth.org/">twofactorauth.org</a>.</p>
+</div>
 
+<div id="now_what">
 <h3>So Now That I Have it Turned On, I Have to Wait to Receive an SMS Code Whenever I Sign In?</h3>
 
 <p>Yes. Admittedly, the extra time it takes to wait and receive a code may be inconvenient. But the added hurdle to entry is more than worth the trade-off of being able to prevent someone malicious from accessing your account.</p>
+</div>
 
+<div id="no_signal">
 <h3>What if I Lose My Phone or Can't Get Enough Signal to Receive the SMS?</h3>
 
 <p>SMS is <em>one</em> possible option for getting 2FA tokens. Another option is to download a token generator application like <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en">Google Authenticator</a> or <a href="https://www.authy.com/">Authy</a>. Both options can be used offline, as they both utilize a time-based protocal called <a href="https://en.wikipedia.org/wiki/Time-based_One-time_Password_Algorithm">TOTP</a> (Time-based One-time Password Algorithm) that allows any number of programs to work, provided they all follow the same implementation. With a TOTP-based app installed and configured to be your 2FA application, whenever you wanted to log into Gmail, you would instead open your generator app instead of waiting for a text message. The generator app would then display a number for that specific app, which would change every few seconds. The constant changing ensures that someone who somehow grabs the code after-the-fact would not be able to use it outside of a very small window of time.</p>
 
 <p>Nearly every site that allows 2FA also allows you to create a handful of "backup" codes that can be used if your phone is not on you. These backup codes are typically one-time-use, and only to be used in emergencies. It is suggested that you may wish to print them out and keep them in your wallet to use as needed. If you expect to hold onto them for awhile, you may wish to have the cards laminated--from personal experience, the ink on a normal sheet of paper will not survive for very long in your wallet.</p>
+</div>
 
+<div id="sms_vs_totp">
 <h3>Why is a TOTP/Token-Generator App Preferred Over SMS?</h3>
 
 <p>In addition to the previous problem that your phone must have a signal in order to receive the SMS (not helpful if you're out of range or in another country), the SMS protocol is not very secure and prone to interception. For this reason the NIST <a href="https://pages.nist.gov/800-63-3/">depreciated</a> SMS as an out-of-band authentication device.</p>
@@ -70,12 +97,15 @@
 </ul>
 
 <p>From experience, if you are in the habit of changing out your phone on a semi-regular basis, you may wish to <strong>avoid</strong> Google Authenticator for now. It does not have an easy way of migrating your tokens over to another device if you get a new cell-phone. In effect, this means that if you change phones, you may have to disable 2FA on each service before re-enabling it on the new phone in order to completely 'migrate' devices. Failing to do this can result in you being locked out of your own connected account, making it somewhat of a pain, particularly if you have 2FA turned on across many services. Authy has the ability to authorize more than one device to receive tokens, making migration easier. Other competing products may support this as well.</p>
+</div>
 
+<div id="hardware">
 <h3>What if I Want to Use a Hardware Key?</h3>
 
 <p>The <a href="https://www.yubico.com/">Yubikey</a> is the current industry standard used by most software companies, although older <a href="https://www.amazon.com/RSA-SecurID-SID700-hardware-token/dp/B000MW4228/">RSA SecurID tokens</a> are still used heavily in government fields, and work just fine. Yubikeys are well-regarded for their extensive support of the various protocols and integrations with devices (some varieties contain NFC chips so that you can authenticate by simply pressing it against your Android phone instead of requiring a micro-USB adapter to plug it in), but are somewhat expensive and <a href="https://plus.google.com/+KonstantinRyabitsev/posts/4a7RNxtt7vy">not fully open-source</a>, which may turn off FOSS-enthusiasts or the truly paranoid. If either of these pose concerns for you, I advise you to seek out <a href="https://www.amazon.com/s/ref=nb_sb_ss_c_1_4?url=search-alias%3Dcomputers&field-keywords=fido+u2f+security+key&sprefix=fido%2Ccomputers%2C181&crid=2GKSEHA6RJ0LC">alternatives</a> that may be cheaper or better conform to your security needs. Any device you pick should follow the <a href="https://en.wikipedia.org/wiki/Universal_2nd_Factor">U2F standard</a> in order to ensure compatibility with your various services and the integrity of the generated token.</p>
+</div>
 
-<footer><section>
+<footer><section id="summary">
 <h2>Summary</h2>
 <ul>
     <li>Turn on Two-Factor Authentication for all important online accounts.</li>

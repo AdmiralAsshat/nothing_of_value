@@ -7,15 +7,38 @@
     <link rel="stylesheet" href="css/style.css"">
 </head>
 <body>
-    <header><section>
+    <header><section id="top">
     <h1>You Need a VPN</h1>
 
     <p>The internet is nothing more than a giant transit system of packets being sent between servers. Security was an afterthought:  the original architects were simply thrilled that the packets arrived at all. As a result, most traffic is sent over plain HTTP, which makes it trivial to intercept by packet-sniffing. A simple network analysis tool can be employed to monitor <a href="https://arstechnica.com/security/2014/06/what-the-nsa-or-anyone-can-learn-about-you-from-internet-traffic/">nearly everything you do online</a>. The information gleaned can be used by anyone:  an eavesdropper at the coffee shop, the NSA, even your <a href="https://arstechnica.com/information-technology/2015/03/atts-plan-to-watch-your-web-browsing-and-what-you-can-do-about-it/3/">ISP</a>.</p>
 
-    <p>A safer version of HTTP exists called <strong>HTTPS</strong>, which encrypts the information before being sent to the server. HTTPS will often be employed on pages that handle secure information, such as credit cards or login info. Despite our best efforts, however, HTTPS is not yet available on all websites. One reason is that the enhanced security of HTTPS creates more overhead for the website, as each packet sent requires an authentication 'handshake'. It <a href="https://www.cs.cmu.edu/~dnaylor/CostOfTheS.pdf">increases</a> the amount of time the page takes to load. Finally, operating an HTTPS website required purchasing a renewable HTTPS certificate from a certificate authority, which drives up the cost of maintaining the website. For a static website which holds no user data or sensitive information, the promise of 'security' simply may not be worth the trade-off.</p>
+    <p>A safer version of HTTP exists called <abbr title="HTTP Secure">HTTPS</abbr>, which encrypts the information before being sent to the server. HTTPS will often be employed on pages that handle secure information, such as credit cards or login info. Despite our best efforts, however, HTTPS is not yet available on all websites. One reason is that the enhanced security of HTTPS creates more overhead for the website, as each packet sent requires an authentication 'handshake'. It <a href="https://www.cs.cmu.edu/~dnaylor/CostOfTheS.pdf">increases</a> the amount of time the page takes to load. Finally, operating an HTTPS website required purchasing a renewable HTTPS certificate from a certificate authority, which drives up the cost of maintaining the website. For a static website which holds no user data or sensitive information, the promise of 'security' simply may not be worth the trade-off.</p>
     </section></header>
 
-    <section>
+    <section id="toc">
+    <h2>Table of Contents</h2>
+
+    <ol>
+        <li><a href="#top">Intro</a></li>
+        <li><a href="#toc">Table of Contents</a></li>
+        <li><a href="#how_it_works">How a VPN Works</a></li>
+        <li><a href="#vpn_for_play">VPN's Are Not Just for Teleworking</a></li>
+        <li><a href="#providers">Where to Find a VPN Provider</a></li>
+        <li><a href="#faq">Frequently Asked Questions</a></li>
+        <ol type="i">
+            <li><a href="#public_safety">How does someone spy on my browsing on a public wifi?</a></li>
+            <li><a href="#coffee_shop">Why am I more vulnerable in a coffee shop than at home?</a></li>
+            <li><a href="#vpn_trust">How do I know that my VPN provider isn't spying on me?</a></li>
+            <li><a href="#permanently_on">Should I use a VPN all the time?</a></li>
+            <li><a href="#anonymity">Will a VPN provide complete anonymity online?</a></li>
+            <li><a href="#sign-in_warnings">I turned on the VPN, and now this site says that someone logged into my account from overseas!</a></li>
+        </ol>
+        <li><a href="#additional">Additional Resources</a></li>
+        <li><a href="#summary">Summary</a></li>
+    </ol>
+    </section>
+
+    <section id="how_it_works">
     <h2>How a VPN Works</h2>
 
     <p>A VPN, or Virtual Private Network, works by extending and internal, private network over a larger, public space. When a VPN is active, a device from outside of the physical location of the private network is assigned an IP address as though it were within the network. VPN's are often used on corporate networks in order to allow employees who are working remotely to be able to access the employer network without having to be physically connected to the network. This would allow the employee to access network-shared documents, internal servers, etc. For example, an employee on their home wi-fi that is signed into an office VPN with a network-connected printer should theoretically be able to turn on their corporate VPN and then be able to queue the document on the office printer and pick it up when they head into the office.</p>
@@ -27,7 +50,7 @@
     </ol>
     </section>
 
-    <section>
+    <section id="vpn_for_play">
     <h2>VPN's Are Not Just for Teleworking</h2>
 
     <p>When your computer is connected to a VPN, all of the information sent through the VPN is encrypted between your computer and the VPN server. This means that anyone intercepting packets along the way would find the packets encrypted. While the encryption will be of varying strength and could theoretically be broken, this should be enough to ward off the Coffee Shop Hacker and make him turn towards easier targets on the network.</p>
@@ -39,7 +62,7 @@
     <p>Finally, because the query appears to come from the IP address of the VPN server rather than the IP of the user's home wi-fi, VPN's can be used to bypass georestrictions. VPN's are very popular in countries where Netflix is not offered, for instance. By using a VPN with a US-based server to sign into Netflix, the user appears to be in the US, and Netflix will allow the user to access US-locked media.</p>
     </section>
 
-    <section>
+    <section id="providers"> 
     <h2>Where to Find a VPN Provider</h2>
 
     <p>Finding the "perfect" VPN is incredibly difficult, if not impossible. All that establishing a private VPN really requires is a remote server and a protocol to establish the secure tunnel from your device to the server. You could even setup your own on a private AWS server if you so desired. The relative ease of setup has inspired many companies to create low-cost VPN solutions as demand has soared. Unfortunately, the lack of standards and accountability limits our ability to objectively rate VPN providers and the integrity of their offerings. The following URL is an independently-maintained list of various VPN providers and their supported features:</p>
@@ -52,45 +75,57 @@
     <ul>
         <li>Absolutely no logging (VPN providers are a favorite target for law-enforcement agencies who suspect that their subscribers may be using a VPN to do illegal things. The only way that a VPN provider cannot be compelled to give up their logs about you to law enforcement is if they don't keep any logs to turn over.</li>
         <li>Servers hosted in multiple countries (Effective georestriction circumvention may require that you sometimes switch between continents).</li>
-        <li>IP and DNS leak protection (You cannot effectivly hide your traffic from your ISP if you are still reaching out to the ISP for domain name resolution)</li>
+        <li>IP and DNS leak protection (You cannot effectively hide your traffic from your ISP if you are still reaching out to the ISP for domain name resolution)</li>
     </ul>
     </section>
 
-    <section>
+    <section id="faq">
     <h2>Frequently Asked Questions</h2>
 
+    <div id="public_safety">
     <h3>How does someone spy on my browsing on a public wifi?</h3>
 
     <p>All information is sent and received on the internet by exchanging packets between the website's server and the end-user's laptop. Unless the site is using HTTPS, these packets are transmitted in plaintext. With freely available traffic analysis software (such as the ubiquitous Wireshark), it is <a href="https://www.youtube.com/watch?v=r0l_54thSYU">trivial</a> to intercept or inspect a packet in transit that is being sent on your network. This is known as "<a href="https://en.wikipedia.org/wiki/Packet_analyzer">packet sniffing</a>". If the contents of those packets are opened, a third party within your network can see exactly which websites you're visiting, what queries you're sending to your favorite search engine, and what you're posting on your blog. Website credentials, like your username and password, can be captured, too.</p>
+    </div>
 
+    <div id="coffee_shop">
     <h3>Why am I more vulnerable in a coffee shop than at home?</h3>
 
     <p>It is generally assumed that no one is going to be on your home wifi except for you, your family, and any visiting friends that you might have given the wifi password. On a public wifi at a Starbucks, however, you have no idea who else is currently logged in to the network. The risk extends to any publicly-accessible network: a library, an airport, a university dorm's wifi, etc.</p>
+    </div>
 
+    <div id="vpn_trust">
     <h3>How do I know that my VPN provider isn't spying on me?</h3>
 
     <p>This is a fundamental problem with VPN's:  you don't. When you decide to run your traffic through a VPN, you are essentially putting a middleman between yourself and your traffic's destination. The VPN provider functions as a courier:  you put your packets in the courier's care so that no on else will intercept them, but you are intrinsically trusting the VPN provider not to look at the packets, either. If the VPN provider is not trustworthy, this may be no better than running without one. It is up to you to find a VPN provider that you are willing to trust. Even though virtually every VPN provider will claim that they will not inspect your data, it is difficult for them to prove it. VPN providers may enact certain policies to increase that trust, such as a strict no-logging policy. Unfortunately, getting a VPN provider to "prove" that they don't keep any logs is easier said than done.</p>
+    </div>
 
+    <div id="permanently_on">
     <h3>Should I use a VPN all the time?</h3>
 
     <p>Using a VPN constantly will depend on what you are trying to achieve. If you're only trying to protect yourself from malicious eavesdroppers at a coffee shop or airport wifi, then you can safely turn off the VPN when you're at home. On the other hand, if your concern is stopping your ISP from spying on your activity, or from sites you visit on the internet knowing your true IP, then using a VPN at all times would be more beneficial.</p>
+    </div>
 
+    <div id="anonymity">
     <h3>Will a VPN provide complete anonymity online?</h3>
 
-    <p>No. VPN's were not designed for anonymity. The fact that the real IP Address is masked is more of a byproduct than the true purpose. It is still possible to build a 'profile' of you based on the websites you visit, even if you visit them through a VPN. They will still have a record of the VPN's IP address visting the website. For example, if you sign onto your Facebook using a VPN server based in Germany, Facebook still has a record of <strong>you</strong> visiting the website--you just did so under a German IP Address. If that same IP Address were then used to send an anonymous e-mail to a school calling in a bomb threat, the authorities would still have sufficient evidence to tie you to the bomb threat, even though you used a VPN. True anonymity is very, very difficult:  if that is your end-goal, you would be well-advised to use something like Tor in addition to a VPN.</p>
+    <p>No. VPN's were not designed for anonymity. The fact that the real IP Address is masked is more of a byproduct than the true purpose. It is still possible to build a 'profile' of you based on the websites you visit, even if you visit them through a VPN. They will still have a record of the VPN's IP address visting the website. For example, if you sign onto your Facebook using a VPN server based in Germany, Facebook still has a record of <strong>you</strong> visiting the website--you just did so under a German IP Address. If that same IP Address were then used to send an anonymous e-mail to a school calling in a bomb threat, the authorities would still have sufficient evidence to tie you to the bomb threat, even though you used a VPN. True anonymity is very, very difficult:  if that is your end-goal, you would be well-advised to use something like <a href="https://www.torproject.org/">Tor</a> in addition to a VPN.</p>
+    </div>
 
+    <div id="sign-in_warnings">
     <h3>I turned on the VPN, and now this site says that someone logged into my account from overseas!</h3>
 
     <p>Certain websites like Facebook, Gmail, Paypal, etc. have various safeguards that are built-in to try to prevent people from logging in with compromised credentials. Essentially, when you log into Facebook, it keeps track of the IP Address from where you logged in and a rough geolocation corresponding to that IP Address. It uses this to build a profile of 'you' and where you've previously logged in. By doing so, it has a built-in early warning system that can trigger if an IP Address from halfway across the world suddenly logs in using your credentials. For instance, if you have a five-year history of logging into your Facebook exclusively from the georegion around Chicago, and suddenly your account is accessed from an IP Address in India, Facebook will assume that you have been hacked and send you an alert. Facebook has no way of knowing whether that IP is a foreign entity or you logging in through a VPN. And so if you start using a VPN to change your external IP from your hometown of Chicago to a server in the Bahamas, Facebook would similarly trigger an alert when it starts to see you logging in from the Bahamas. This is not necessarily a bad thing, provided you know why it's happening.</p>
+    </div>
     </section>
 
-    <section>
+    <section id="additional">
     <h2>Additional Resources</h2>
 
     <a href="http://computer.howstuffworks.com/vpn.htm">How VPNs Work</a>
     </section>
 
-    <footer><section>
+    <footer><section id="summary">
         
     <h2>Summary</h2>
     <ul>

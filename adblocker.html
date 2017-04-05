@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="css/style.css"">
 </head>
 <body>
-    <header>
+    <header><section id="top">
     <h1>You Need an Adblocker</h1>
-    </header>
+    </header></section>
 
-    <section>
+    <section id="intro">
     <p>The reign of pointlessly destructive viruses has passed. Where viruses once ravaged your computer merely because the virus' authors wanted to demonstrate how 'clever' they were, viruses have been replaced by something more profitable:  spyware, adware, and ransomware. As a method of distribution, malware-ridden ads (sometimes called <a href="https://en.wikipedia.org/wiki/Malvertising">'Malvertising'</a>) spread far more easily than a conventional virus. The viruses of yesteryear required downloading and running that suspicious ".exe" file or opening that curious attachment in your inbox. Malvertising, on the other hand, requires nothing more than a browser and a website running ads from a <a href="https://www.malwarebytes.com/whatismalvertising/">compromised</a> ad network.</p>
 
     <p>When the ads aren't delivering malicious content to your PC, they're <a href="http://www.kaushik.net/avinash/web-analytics-visitor-tracking-cookies/">tracking you</a>. They gather data on your browsing habits, which they send back to the advertisers in order to build a <a href="https://panopticlick.eff.org/">'profile'</a> about you. This profile will include <a href="http://www.kaushik.net/avinash/web-analytics-visitor-tracking-cookies/
@@ -24,9 +24,28 @@
    <p>Ads are pervasive, invasive, and dangerous. While it has been argued that the influx of ads continue to power the "free and open" web, it comes at the cost of your privacy, your security, and your sanity. An Adblocker can stop these ads from displaying on the webpages and prevent the page from reaching out to third-party websites for the purposes of tracking. In doing so, an adblocker can bring some level of enjoyability back to your browsing experience.</p>
    </section>
 
-    <hr>
+    <section id="toc">
+    <h2>Table of Contents</h2>
 
-    <section>
+    <ol>
+        <li><a href="#intro">Intro</a></li>
+        <li><a href="#toc">Table of Contents</a></li>
+        <li><a href="#download">Where to Get One</a></li>
+        <li><a href="#faq">Frequently Asked Questions</a></li>
+        <ol type="i">
+            <li><a href="#why_worse">We have had ads in magazines, radio, and television for years. Why are online ads so much worse?</a></li>
+            <li><a href="#how_adblockers_work">How does an adblocker work?</a></li>
+            <li><a href="#legitimate_use">Should a site I'm visiting ever reach out to a third-party domain?</a></li>
+            <li><a href="#will_it_break">Will the adblocker break certain websites?</a></li>
+            <li><a href="#antivirus">Why do you recommend an adblocker for security over anti-virus or firewall software?</a></li>
+            <li><a href="#anti-adblock">A site I visit has detected that I installed an adblocker and is yelling at me for it. What should I do?</a></li>
+            <li><a href="#whitelist">I want to support the sites I visit.</a></li>
+        </ol>
+        <li><a href="#summary">Summary</a></li>
+    </ol>
+    </section>
+
+    <section id="download">
     <h2>Where to Get One</h2>
 
     <p>Find an adblocker you like and install it. <a href="https://github.com/gorhill/uBlock">uBlock Origin</a> is highly recommended if it supports your platform:</p>
@@ -45,12 +64,12 @@
     <p>For mobile phones, the landscape is a bit different. Google Chrome is available on iOS and Android, but Google does not allow extensions on Chrome mobile, so an adblocker is out. Firefox for Android still allows add-ons, and so uBlock Origin can still be installed. On iPhones, ad blocking is supported on Safari. Possible adblockers for iOS may be reviewed <a href="http://lifehacker.com/the-best-ad-blockers-for-ios-9-1731433501">here</a>. A direct recommendation is not provided due to lack of familiarity with Safari.</p>
 
     </section>
-    <hr>
 
-    <section>
+    <section id="faq">
     <h2>Frequently Asked Questions</h2>
 
-    <h3><p><em>We have had ads in magazines, radio, and television for years. Why are online ads so much worse?</em></p></h3>
+    <div id="why_worse">
+    <h3>We have had ads in magazines, radio, and television for years. Why are online ads so much worse?</h3>
 
     <p>There are a couple of ways that the 'static' advertisements of the past different from today's targeted advertising:</p>
     <ul>
@@ -63,36 +82,49 @@
         <li><strong>Targeted advertising was not nearly as advanced as in modern ads.</strong> 
         In a magazine, radio, or television advertisement, the same advertisement was presented to the entire audience. Insofar as advertisements were "targeted", they could only be as specific as the assumed demographic of the consumer:  an ad for a computer would be more likely to appear in Wired than in Salon, for instance. On a website, however, you might see an ad for shoes. When you share the article with your father, however, and it opens in his browser on his laptop, he might instead see an ad for Viagra. This is all based on what the tracking networks have gleaned about each visitor, based on past visits or based on cookies from other vendors within the ad network.</li>
     </ul>
+    </div>
 
-    <h3><p><em>How does an adblocker work?</em></p></h3>
+    <div id="how_adblockers_work">
+    <h3>How does an adblocker work?</h3>
 
     <p>Adblockers can function in a few ways. One is by using a set of rules/filters from a maintained database like <a href="https://easylist.to/index.html">EasyList</a>, which documents domains that are known to be connected to ad networks. When the adblocker sees that a webpage is pulling resources from these domains, it will block the outgoing connection to those domains. Thus the domain does not send back the ad's resources, and the ad does not display. Other adblockers go a step further and stop <em>any</em> request that goes to a third-party domain, under the assumption that anything which is not delivered via the site itself is probably a malicious third party.</p>
+    </div>
 
-    <h3><p><em>Should a site I'm visiting ever reach out to a third-party domain?</em></p></h3>
+    <div id="legitimate_use">
+    <h3>Should a site I'm visiting ever reach out to a third-party domain?</h3>
 
     <p>Yes, and there are legitimate reasons why it might do so. Many sites use third party <a href="https://en.wikipedia.org/wiki/Content_delivery_network">content delivery networks</a> (often called a "CDN") in order to handle the bulk of heavy lifting when it comes to serving particular pieces of content to users. Another legitimate use might be if a website relies on a third-party payment processor (such as Stripe, Amazon, Paypal, etc.) in order to securely process your credit card payment. Even as something as simple as displaying an image that is hosted on another website technically requires reaching out to a third-party domain in order to fetch that image.</p>
+    </div>
 
-    <h3><p><em>Will the adblocker break certain websites?</em></p></h3>
+    <div id="will_it_break">
+    <h3>Will the adblocker break certain websites?</h3>
 
     <p>Generally, no, it should not. But on the off-chance that it does, most adblockers can be turned off temporarily or white-listed for a particular page so as not to interfere with its functionality.</p>
+    </div>
 
-    <h3><p><em>Why do you recommend an adblocker for security over anti-virus or firewall software?</em></p></h3>
+    <div id="antivirus">
+    <h3>Why do you recommend an adblocker for security over anti-virus or firewall software?</h3>
  
     <p>Most operating systems now have built-in anti-virus and firewall. The need for third-party AV and firewall solutions has diminished. On an operating system like ChromeOS (used in Chromebooks), the user is not even permitted to install programs, and so anti-virus would be redundant. Because the average user spends so much of their time in the browser, and because the internet itself is still such an insecure place, the most pressing recommendation I can give to anyone using a computer right now is to make sure that their browser has an adblocker. Ten years ago, if I were "setting up" a computer for a friend or relative, I would probably have installed a free anti-virus scanner and <a href="https://en.wikipedia.org/wiki/ZoneAlarm">ZoneAlarm</a> firewall. Today, I will install for them a <strong>non-Internet Explorer</strong> browser and an adblocker.</p>
+    </div>
 
-    <h3><p><em>A site I visit has detected that I installed an adblocker and is yelling at me for it. What should I do?</em></p></h3>
+    <div id="anti-adblock">
+    <h3>A site I visit has detected that I installed an adblocker and is yelling at me for it. What should I do?</h3>
 
     <p>Firstly, consider whether a site that values its revenue stream over your security is truly deserving of your business. For instance, Forbes began haranguing visitors to lower their shields, <a href="https://www.techdirt.com/articles/20160111/05574633295/forbes-site-after-begging-you-turn-off-adblocker-serves-up-steaming-pile-malware-ads.shtml
     ">then served them malware-ridden ads</a>. Secondly, you could try enabling <a href="https://github.com/reek/anti-adblock-killer">Anti-Adblock Killer</a> within your adblocker's subscription lists. An anti-adblock list will try to stop the page from figuring out that you're running an adblocker. On most sites, the site's adblocker check is achieved by a piece of Javascript, and so one way to disable the check is to disable Javascript on that particular page (this may break other stuff on the page, so I recommend it in cases where you're only there to view a particular page or article). Finally, if you truly wish to risk your security for the sake of viewing the page, you can temporarily turn off the adblocker for that specific page.</p>
+    </div>
 
-    <h3><p><em>I want to support the sites I visit.</em></p></h3>
+    <div id="whitelist">
+    <h3>I want to support the sites I visit.</h3>
 
     <p>As previously mentioned, you can always white-list or disable your adblocker for the specific page in question. However, this does not encourage the site to stop using obnoxious or intrusive ads--it merely encourages the sites to guilt-trip you into accepting them. Some sites have ceased using ad networks and have returned to displaying individual ads from a hand-curated list of sponsors. This bypasses the adblocker, since the images are now being stored on the first party domain. However, it also mitigates the security concern, since the website owner personally vetted the ads being displayed on the page. It is a return to form from the days of magazine ads, and while perhaps it is less profitable, it is far less intrusive.</p>
 
     <p>Other sites have begun offering paid, subscription-based logins where the site is naturally free of ads when logged in with a paid account. If you wish to go down that route, I would advise verifying first that the logins are truly "ad-free" and not simply "less intrusive." There is little reason to pay a website that still tracks you.</p> 
+    </div>
     </section>
 
-    <footer><section>
+    <footer><section id="summary">
     <h2>Summary</h2>
 
     <ul>

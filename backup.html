@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css"">
 </head>
 <body>
-    <header><section>
+    <header><section id="top">
     <p><h1>You Need a Backup</h1></p>
 
     <p>Your data is valuable. Too valuable to keep all in one place. Unlike physical media, the process of making a copy of your data is not an expensive or laborious process. On the contrary, the mere fact that it exists digitally allows you to make nearly infinite copies at a fraction of the time it would take to physically xerox a document.</p>
@@ -15,7 +15,34 @@
     <p>Regrettably, while your digital document could theoretically last forever, the media on which it's stored will not. Your hard-drive will eventually fail, your floppy-disk will refuse to read, even your CD's and DVD's may one day suffer from <a href="https://en.wikipedia.org/wiki/Disc_rot">disc rot</a>. If all of your data is stored in one place, it is all but guaranteed that you will one day lose it. The only way to mitigate against this is to make a backup of your data:  that is, store it wherever it is you're currently storing it (your phone, your laptop, your flash drive, etc.), and then store it <strong>somewhere else</strong>. In this way, you have a "redundant" source for your data, should the first one suffer some misfortune.</p>
     </section></header>
 
-    <section>
+    <section id="toc">
+    <h2>Table of Contents</h2>
+
+    <ol>
+        <li><a href="#top">Intro</a></li>
+        <li><a href="#toc">Table of Contents</a></li>
+        <li><a href="#how_to">How to Back Up Your Data</a></li>
+        <li><a href="version_historymultiple">Make Multiple Backups</a></li>
+        <li><a href="#restore">Test That You Can Restore From Your Backup</a></li>
+        <li><a href="#destinations">Don't Back Up To the Same Place As Your Original Data</a></li>
+        <li><a href="#faq">Frequently Asked Questions</a></li>
+        <ol type="i">
+            <li><a href="#backup_what">What Should I Be Backing Up?</a></li>
+            <li><a href="#how_many">How Many Backups Should I Make?</a></li>
+            <li><a href="#automate">Manually Backing Stuff Up is Tedious and Time-Consuming. Can I Make it Easier or Automatic?</a></li>
+            <li><a href="#cloud_only">What if I Just Store Everything on a Flash-Drive / External Hard-Drive / The Cloud?</a></li>
+            <li><a href="#all_in_the_cloud">I Put All My Stuff on the Cloud. Is that Safe?</a></li>
+            <li><a href="#version_history">How Do I Backup Multiple Versions of a File?</a></li>
+            <li><a href="#offsite">Where Can I find an Offsite / Cloud Backup Storage Provider?</a></li>
+        </ol>
+        <li><a href="#continuous_backup">A Note on Continuous Backups</a></li>
+        <li><a href="#additional">Additonal Resources</a></li>
+        <li><a href="#summary">Summary</a></li>
+
+    </ol>
+    </section>
+
+    <section id="how_to">
     <h2>How to Back Up Your Data</h2>
 
     <p>At its most basic, making a backup just means copying your data from wherever it normally resides to somewhere else. It could be as simple as buying a sufficiently large USB flash drive and copying everything important onto it (assuming it is large enough). This would be a quick-and-dirty backup, which would be less than ideal, but it would be better than nothing.</p>
@@ -30,7 +57,7 @@
     </ol>
     </section>
 
-    <section>
+    <section id="multiple">
     <h2>Make Multiple Backups</h2>
 
     <p>General best practices for backing up follow the <a href="http://blog.trendmicro.com/trendlabs-security-intelligence/world-backup-day-the-3-2-1-rule/">3-2-1-rule</a>. Simply put, that rule means that for any data you consider important, you should have:</p>
@@ -46,7 +73,7 @@
     <p>Why should one of your backups be offsite? This is for what we call "Disaster Recovery". It doesn't matter if your data is backed up across 50 different pieces of media inside your house:  if your house floods, catches fire, or gets hit by a tornado, your data is still gone. Backing it up to an offsite location provides resistance to your primary location getting wiped out.</p>
     </section>
 
-    <section>
+    <section id="restore">
     <h2>Test That You Can Restore From Your Backup</h2>
 
     <p>A common pitfall that results from automating the backup process is that rarely does anyone actually check to see if the backup was successful. The software might <em>say</em> it was successful, but you will never know for sure until you actually try restoring from your backup. Because most people don't check their backups until they're needed, the doomsday scenario--a hard-drive crashes, and upon trying to restore from a backup they discover that the backup is either incomplete or not what they needed--is frighteningly common. </p>
@@ -59,15 +86,16 @@
     </ul>
     </section>
 
-    <section>
+    <section id="destinations">
     <h2>Don't Back Up To the Same Place As Your Original Data</h2>
 
     <p>This should go without saying, given our original directive that a 'backup' should be defined as your data being stored <strong>somewhere else</strong>, but I have seen this happen enough that it bears special mention:  do not backup your data to the same device where your original data is housed. That is to say, if you are backing up your computer's My Documents folder, don't just create a copy somewhere else on the same hard-drive. If the hard-drive fails, both the original folder and the backup folder would be inaccessible, meaning your documents would still be gone. Some people periodically make copies of files or folders before they make changes to it so that they have a quick-and-dirty copy they can restore from if something horrible happens to the original file. This is fine--but it should not be considered a reliable 'backup'. </p>
     </section>
 
-    <section>
+    <section id="faq">
     <h2>Frequently Asked Questions</h2>
 
+    <div id="backup_what">
     <h3>What Should I Be Backing Up?</h3>
 
     <p>Everything you care about. Receipts. Tax documents. Schoolwork. Source code. Pictures you've taken. Music you've downloaded. Anything that you would regret losing if your computer were to suddenly turn off and never again turn on.</p>
@@ -75,11 +103,15 @@
     <p>If you must limit what you can backup due to space or financial restrictions, prioritize backing up the things that you cannot easily replace. For instance, if your music was all purchased through a digital music vendor like iTunes, Amazon, or Google Play, then losing it, while inconvenient, would not mean that the music is gone forever, as you would be able to re-download it at no charge. On the other hand, if your music is from CD's you ripped yourself, backing up the MP3's would be considerably more valuable, since getting them again would require you manually re-ripping your albums. In the same vein, automatic photo backup is not yet ubiquitous, and so backing up any photos you've taken with your camera or smartphone would be beneficial. The fact that you uploaded some of those pictures to Facebook does not give you a good, quality backup. Since most photo storage sites compress your photos, the ones that you might have uploaded to Facebook will almost certainly be of lower quality than the originals.</p>
 
     <p>Do not worry so much about backing up the portions of your computer that relate to the operating system (i.e. don't try to back up C:\Windows). In most situations where catastrophe strikes, you are better off reinstalling the OS anyway. OS and registry-related files tend not to transfer well anyway, so backing up the Windows directory from one hard-drive and trying to restore it to a different hard-drive would likely not work.</p>
+    </div>
 
+    <div id="how_many">
     <h3>How Many Backups Should I Make?</h3>
 
-    <p>See the section Make Multiple Backups.</p>
+    <p>See the section <a href="#multiple">Make Multiple Backups</a>.</p>
+    </div>
 
+    <div id="automate">
     <h3>Manually Backing Stuff Up is Tedious and Time-Consuming. Can I Make it Easier or Automatic?</h3>
 
     <p>If you decide to manually initiate your backups, the process can be expedited by leveraging a built-in tool like <a href="https://www.microsoft.com/en-us/download/details.aspx?id=15155">SyncToy</a> to handle the bulk of the legwork. Rather than copying the entire directory every time (wasteful), or hand-selecting each file to copy over every time (tedious), a utility like SyncToy can examine the source and the destination directory and only copy over files that are missing or have changed. The first time a backup is performed, it would need to copy over the entire directory, but every subsequent time the process would run much more quickly, because SyncToy would only copy over the files that have been added or modified since the last time the backup ran. With some ingenuity, you could even make Synctoy launch <a href="http://www.wikihow.com/Use-SyncToy-to-Automatically-Backup-Your-Thumbdrive">automatically</a> whenever a flash drive is plugged in.</p>
@@ -95,19 +127,25 @@
         <li><a href="http://www.wikihow.com/Schedule-an-Automatic-File-Backup-in-a-Mac">OSX / MacOS</a></li>
         <li><a href="http://www.techradar.com/news/software/applications/linux-backup-the-complete-guide-933134/1">Linux</a></li>
     </ul>
+    </div>
 
+    <div id="cloud_only">
     <h3>What if I Just Store Everything on a Flash-Drive / External Hard-Drive / The Cloud?</h3>
 
     <p>The temptation to store everything strictly on external media is understandable, given that it inherently avoids the possibility of data loss due to your computer dying. However, it is important to understand that if your documents are stored <strong>only</strong> on an external, or on Google Drive, or on Dropbox, you haven't really <em>backed them up</em>--you've simply moved where the files live.  Keeping all of your documents on Google Drive may make them accessible from all of your devices and store them 'in the cloud', but if you should lose access to your Google Drive, the files would now be gone.</p>
 
     <p>Additionally, consider the following:  if you have so many songs, movies, or photos that you are storing them all on an external hard-drive because they are too large to fit on your laptop's hard-drive, you should look into getting a <em>second</em> external hard-drive to be a backup / clone of the first. This is, again, to ensure that you never have any files that are stored in just one place.</p>
+    </div>
 
+    <div id="all_in_the_cloud">
     <h3>I Put All My Stuff on the Cloud. Is that Safe?</h3>
 
     <p>It is important to recognize that "the cloud" is a romanticized term for what essentially means "someone else's server". When you backup your files to Apple, Google, or Amazon's "cloud", the files go to a series of storage racks somewhere in an Apple/Google/Amazon facility. They are still ultimately stored on the same kind of commercial-grade hard-drives that are used in your computer. Put another way, if you simply installed some software onto your computer that made your computer's files accessible to your smartphone, tablet, or laptop from outside of the internal network, you have technically made a "cloud storage" device (this is the idea behind services such as <a href="https://owncloud.org/">ownCloud</a> or <a href="https://nextcloud.com/">Nextcloud</a>). Since cloud storage is still hard-drive-based storage on the backend, it is prone to all of the same problems as conventional HDD storage:  drive failures, bit rot, data loss, etc. Most vendors of cloud storage services will offer some level of redundancy across their drives so that they are less likely to lose your data, but it is still possible.</p>
 
     <p>Additionally, consider the restoration cost when deciding whether you want to entrust all of your files to cloud storage as your sole backup. If you have a one-terabyte drive that you have backed up to an offsite cloud-storage provider and your drive fails, that means you have to <em>download</em> one terabyte worth of data in order to restore all of your data to the replacement drive. That could take a prohibitive amount of time, not to mention incur possible overage fees with your ISP. An offsite, "cloud" storage backup is an excellent thing to have, but it should not be your <strong>only</strong> form of backup.</p>
+    </div>
 
+    <div id="version_history">
     <h3>How Do I Backup Multiple Versions of a File?</h3>
 
     <p>If you are trying to backup a file that is being updated on a regular basis (say, a paper or short story), and want to make backups that allow you to cycle between various drafts without having to create "Copy of Copy of Copy of Untitled Document.txt", consider leveraging your operating system's internal file history feature. This makes the operating system keep track of a file's previous versions so that if the file changes, you can revert the file to an earlier version. The idea of "version history" is used heavily within the software industry so that the company can keep track of the many source files that are being constantly edited by all of the company's programmers. This paradigm can be extended to personal files as well. While it will cause your files to take up slightly more space, it is well worth the trade-off for most files (anyone who has ever inadvertently deleted a section of a document and then saved the document before noticing will wish they has this turned on). </p>
@@ -120,7 +158,9 @@
         <li><a href="http://www.wikihow.com/Use-Time-Machine">OSX / MacOS</a></li>
         <li><a href="https://www.linux.com/learn/total-system-backup-and-recall-deja-dup">Linux</a></li>
     </ul>
+    </div>
 
+    <div id="offsite">
     <h3>Where Can I find an Offsite / Cloud Backup Storage Provider?</h3>
 
     <p>You may wish to do your own research when finding a cloud backup provider, as each individual's needs will differ wildly depending on how much data they have to backup and how accessible they need it.</p> For instance, those who have several local back-ups and only require an offsite backup in case of emergencies might look into <a href="https://aws.amazon.com/glacier/">Amazon Glacier</a>, which is relatively cheap as far as what the storage costs. If the data actually needs to be <em>retrieved</em>, however, the price goes up. Cheap options can be found if you have less than a terabyte of data to store. For those with multiple terabytes to store, various services (see below) offer unlimited storage for around $50-$60 per year. Many other sites specialize in cloud-storage, which is primarily designed for sharing media and were not designed for backup, but if you happen to have one, it can nonetheless be used to backup files. I do not wish to promote any one service over another--you are encouraged to dig into them and see which will work best for you. Some of the more popular ones are mentioned below.</p>
@@ -149,21 +189,24 @@
     </ul>
 
     <p>Other nice but less-essential features might include something like a mobile app, so that the files you backed up from your computer could be restored and accessed from your smartphone or tablet.</p>
+    </div>
 
+    <div id="continuous_backup">
     <h2>A Note on Continuous Backups</h2>
 
     <p>Some backup services might advertise an always-running, "continuous" backup that will instantly detect any new or changed files on your system and start backing up those changes to the cloud storage. This feature may be useful to ensure that your backups are always current with your source data, but if the backup solution does not support file versioning, this can actually cause more harm than good. Consider the following scenario:  if you inadvertently delete a file and subsequently cannot get it back from the Recycle Bin, your first instinct might be to retrieve it from the backup service. However, if your backup service is "continuous" and does not hang on to deleted files or onto previous versions of a file, the deletion may have already replicated to your backup and removed the file from there as well by the time you go to retrieve it. In an even worse scenario, consider what might happen if your computer is infected with ransomware and all of your files are scrambled / encrypted. If you do not immediately detect that the ransomware has encrypted your files and your computer is still able to run programs, the backup software running in the background might replicate all of the encrypted files over to your backup storage and overwrite them with the scrambled versions of the files.</p>
 
     <p>For this reason, some people do not even consider a real-time data replication/mirroring service to be a real "backup" because any damage that occurs to the source files would be quickly passed on to the backup files, thereby negating their usefulness. If your backup solution does not natively support file history, consider creating your own 'rotating' backups (e.g. Backup from One Week Ago, Backup From Two Weeks Ago, etc.), so that you have more than one possible version of the data to use for restoration.</p>
+    </div>
     </section>
 
-    <section>
+    <section id="additional">
     <h2>Additonal Resources</h2>
 
     <a href="http://ims.uthscsa.edu/information_security/documents/Backup.pdf">Backup Guidelines</a>
     </section>
 
-    <footer><section>
+    <footer><section id="summary">
     <h2>Summary</h2>
 
     <ul>

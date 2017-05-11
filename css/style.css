@@ -1,47 +1,27 @@
-/* Headings */
-h1,h2,h3 {
-    text-align: center;
-    line-height: 1.2;
-    /*background-color: rgba(51,204,255,0.50);*/
+/* Landing section */
+.hero {
+            background: #eee;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 1em;
+        }
+
+section {
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
 
-a:link, a:visited {
-    color: #fff;
-}
-
-/* Main Content */
-body {
-
-    margin: 40px auto;
-    max-width: 800px; 
-    line-height: 1.6;
-    font-size: 18px;
-    color: rgba(255,255,255,.95);
-    background-color: rgba(0,102,255,0.87);
-    padding: 0
-}
-
-/* Tables */
-table, th, td {
-        border: 1px solid black;
-        border-collapse: collapse;
-    }
-
-    th, td {
-        padding: 5px;
-        text-align: left
-    }
 
 /* Alternate section background colors */
-section:nth-child(even) {
+/*section:nth-child(even) {
     color: #000; 
     background-color: #b1b8e3;
-}
+}*/
 
-section:nth-child(odd) {
+/*section:nth-child(odd) {
     color:#fff;
     background-color: #26316d;
-}
+}*/
 
 /* Definition Display */
 /* Credit to : */

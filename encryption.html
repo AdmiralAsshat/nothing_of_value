@@ -4,218 +4,238 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Encrypt Everything That You Reasonably Can</title>
-    <link rel="stylesheet" href="css/style.css"">
+    <link rel="stylesheet" href="css/entireframework.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
 </head>
 <body>
 
-    <header><section id="top">
-    <h1>Encrypt Everything That You Reasonably Can</h1>    
+    <nav class="nav" tabindex="-1" onclick="this.focus()">
+        <div class="container">
+            <a class="pagename current" href="index.html">The Bare Minimum</a>
+            <a href="password_manager.html">Password Manager</a>
+            <a href="adblocker.html">Adblocker</a> 
+            <a href="vpn.html">VPN</a>
+            <a href="2fa.html">2FA</a>
+            <a href="encryption.html">Encrypt</a>
+            <a href="backup.html">Backup</a>
+            <a href="screenlock.html">Screenlock</a>
+            <a href="inventory.html">Inventory</a>
+        </div> <!-- end nav container -->
+    </nav>
+    <button class="btn-close btn btn-sm">×</button>
 
-    <p>As our devices become more portable, they become easier to steal. Your primary computing device may no longer be a large, unwieldy desktop tower that never leaves your house; more likely, it is a laptop, tablet, or phone. If you use your personal computing device (hereafter simply referred to as "computer") to do anything beyond what you would feel comfortable doing on a public library computer, you probably have some sensitive documents on your computer. Losing your computer to theft is bad enough:  leaving private invoice, medical, or tax documents sitting in plaintext on your computer for the thief to find merely amplifies possible harm done to you. Wherever it can reasonably be done, you should encrypt your devices.</p>
+    <div class="container">
 
-    </header></section>
+        <div class="hero">
+            <header><section id="top">
+                <h1>Encrypt Everything That You Reasonably Can</h1>    
 
-    <section id="toc">
-    <h2>Table of Contents</h2>
-    <ol>
-        <li><a href="#top">Intro</a></li>
-        <li><a href="#to_use">When To Use Encryption</a></li>
-        <li><a href="#or_not_to_use">When to NOT Use Encryption</a></li>
-        <li><a href="#fde_vs_fle">Full-Disk Encryption Versus File-Level Encryption</a></li>
-        <li><a href="#desktop">Encrypting Your Desktop or Laptop Computer</a></li>
-        <ol type="i">
-            <li><a href="#1p_fde">First Party Full-Disk Encryption Tools</a></li>
-            <li><a href="#3p_fde">Third Party Full-Disk Encryption Tools</a></li>
-            <li><a href="#3p_fle">Third Party File Encryption Tools</a></li>
-        </ol>
-        <li><a href="#phone">Encrypting Your Phone or Tablet</a></li>
-        <li><a href="#faq">Frequently Asked Questions</a></li>
-        <ol type="i">
-            <li><a href="#password_vs_encryption">Why Can't I Just Lock My Computer Behind a Password?</a></li>
-            <li><a href="#forgot_my_password">What If I Forget My Encryption Password?</a></li>
-        </ol>
-        <li><a href="#consider">Additional Considerations</a></li>
-        <ol type="i">
-            <li><a href="#bios">Bitlocker: Be Careful When Updating the BIOS</a></li>
-            <li><a href="#microsoft">Bitlocker: Do You Trust Microsoft With Your Bitlocker Key?</a></li>
-            <li><a href="#apple">FileVault: Do You Trust Apple With Your FileVault Key?</a></li>
-            <li><a href="#encrypted_backups">Encrypt Your Backups</a></li>
-        </ol>
-        <li><a href="#summary">Summary</a></li>
-    </ol>
-    </section>
+                <p>As our devices become more portable, they become easier to steal. Your primary computing device may no longer be a large, unwieldy desktop tower that never leaves your house; more likely, it is a laptop, tablet, or phone. If you use your personal computing device (hereafter simply referred to as "computer") to do anything beyond what you would feel comfortable doing on a public library computer, you probably have some sensitive documents on your computer. Losing your computer to theft is bad enough:  leaving private invoice, medical, or tax documents sitting in plaintext on your computer for the thief to find merely amplifies possible harm done to you. Wherever it can reasonably be done, you should encrypt your devices.</p>
 
-    <section id="to_use">
-    <h2>When To Use Encryption</h2>
+            </section></header>
+        </div><!-- end hero -->
 
-    <p>You should consider encrypting any devices that are frequently transported and hold sensitive data. Depending on the hardware and the operating system it's running, the device can be encrypted with relative ease and with little performance overhead (meaning, you won't really notice). If you are running an up-to-date operating system (OSX / MacOS, Windows 10, iOS, Android 6.0 and above, etc.) and have a relatively recent device, you can probably handle using at least some level of encryption.</p>
-    </section>
+        <section id="toc">
+            <h2>Table of Contents</h2>
+            <ol>
+                <li><a href="#top">Intro</a></li>
+                <li><a href="#to_use">When To Use Encryption</a></li>
+                <li><a href="#or_not_to_use">When to NOT Use Encryption</a></li>
+                <li><a href="#fde_vs_fle">Full-Disk Encryption Versus File-Level Encryption</a></li>
+                <li><a href="#desktop">Encrypting Your Desktop or Laptop Computer</a></li>
+                <ol type="i">
+                    <li><a href="#1p_fde">First Party Full-Disk Encryption Tools</a></li>
+                    <li><a href="#3p_fde">Third Party Full-Disk Encryption Tools</a></li>
+                    <li><a href="#3p_fle">Third Party File Encryption Tools</a></li>
+                </ol>
+                <li><a href="#phone">Encrypting Your Phone or Tablet</a></li>
+                <li><a href="#faq">Frequently Asked Questions</a></li>
+                <ol type="i">
+                    <li><a href="#password_vs_encryption">Why Can't I Just Lock My Computer Behind a Password?</a></li>
+                    <li><a href="#forgot_my_password">What If I Forget My Encryption Password?</a></li>
+                </ol>
+                <li><a href="#consider">Additional Considerations</a></li>
+                <ol type="i">
+                    <li><a href="#bios">Bitlocker: Be Careful When Updating the BIOS</a></li>
+                    <li><a href="#microsoft">Bitlocker: Do You Trust Microsoft With Your Bitlocker Key?</a></li>
+                    <li><a href="#apple">FileVault: Do You Trust Apple With Your FileVault Key?</a></li>
+                    <li><a href="#encrypted_backups">Encrypt Your Backups</a></li>
+                </ol>
+                <li><a href="#summary">Summary</a></li>
+            </ol>
+        </section>
 
-    <section id="or_not_to_use">
-    <h2>When to NOT Use Encryption</h2>
+        <section id="to_use">
+            <h2>When To Use Encryption</h2>
 
-    <p>There may be situations in which encryption is of little to no benefit, or the cons outweigh the pros. These include the following:</p>
-    <ul>
-        <li>The hardware is too old to support a modern operating system where encryption can occur seamlessly.</li>
-        <li>The device is underpowered and encryption may degrade performance considerably.</li>
-        <li>Your device regularly chews through gigabytes of data and maintaining performance is paramount. For instance, someone who does video editing may not find full-disk encryption useful, as they are constantly dumping, altering, and rendering large files. The added overhead from needing to encrypt and decrypt those blocks of data may slow down the rendering process or transfer process from large files to external storage.</li> 
-        <li>Your device holds no absolutely no sensitive data or documents. This could include a computer used only for light internet browsing, gaming, etc.</li>
-        <li>You do not feel that you will be able to remember your decryption password.</li>
-    </ul>
+            <p>You should consider encrypting any devices that are frequently transported and hold sensitive data. Depending on the hardware and the operating system it's running, the device can be encrypted with relative ease and with little performance overhead (meaning, you won't really notice). If you are running an up-to-date operating system (OSX / MacOS, Windows 10, iOS, Android 6.0 and above, etc.) and have a relatively recent device, you can probably handle using at least some level of encryption.</p>
+        </section>
 
-    <p>Unfortunately, once you make the decision to encrypt your device, you open yourself to the risk that you may forget the password. If that happens, your files are locked away forever--there is no "Forgot My Password" option for disk-level decryption. No one has the key but you. So take care to remember it or write it down and keep it somewhere safe. If your device already has files on it, you should make sure that you have everything important backed up before you decide to encrypt it.</p>
-    </section>
+        <section id="or_not_to_use">
+            <h2>When to NOT Use Encryption</h2>
 
-    <section id="fde_vs_fle">
-    <h2>Full-Disk Encryption Versus File-Level Encryption</h2>
-
-    <p>The term "Full-Disk Encryption" ("FDE" for short) refers to encrypting the entire hard-drive (or at least, everything that isn't necessary to boot the device). When a device is fully encrypted, it must be decrypted before the operating system will even load. If the password is entered incorrectly or the drive fails to decrypt, the loading process stops there:  you won't even make it to the Windows/Apple/Ubuntu logo. If a laptop carried a normal, unencrypted hard-drive with Windows installed on it, a thief who has the laptop would not be able to login to Windows without your password. However, the thief could easily remove the hard-drive from the laptop and mount it as an external drive on another computer, which would allow him to inspect the contents of the drive and look at your My Documents folder without needing a password. If the same thing were attempted with a drive that had been encrypted, the thief would need to know the decryption key/password in order to be able to inspect the files on the drive. Otherwise, all he would see would be blocks of random or gibberish data.</p>
-
-    <p>File-Level Encryption refers to only encrypting individual files that may be sensitive or important. For instance, if your laptop is just a Netflix/light-browsing/light-gaming machine <strong>except for</strong> a handful of tax/student loan/medical documents, you may wish to consider just encrypting those documents instead of encrypting the entire drive. Encrypting on an individual file level has some disadvantages, namely that you leave the metadata of the encrypted files exposed. A malicious individual who peers into your My Documents folder might not be able to open your tax documents, but he would still see that you have them; this could encourage him to copy them anyway, even in encrypted format, to try his hand at password cracking later. For a slightly more embarrassing example, encrypting your Porn folder would stop someone from viewing the videos, but they would still be able to see the files themselves and their salacious filenames.</p>
-    </section>
-
-    <section id="desktop">
-    <h2>Encrypting Your Desktop or Laptop Computer</h2>
-
-    <p>There are multiple methods for encrypting your desktop computer, including tools built into the operating system and third-party tools. In general, the first-party tools (i.e. those provided with the operating system) require less work to setup. However, for the truly paranoid, you might not wish to trust Apple or Microsoft to encrypt your data such that they could not be compelled by a three-letter agency to decrypt it without your consent. In which case, you may wish to rely on a third-party tool like TrueCrypt or VeraCrypt.</p>
-
-    <p>Listed below are some of the encryption tools available for each of the major operating systems. Stock tools provided by the OS are listed first, then third party and cross-platform tools.</p>
-
-    <div id="1p_fde">
-    <p>First Party Full-Disk Encryption Tools:</p>
-
-    <ul>
-        <li>OSX / MacOS: <a href="https://support.apple.com/en-us/HT204837">FileVault</a></li>
-        <li>Windows: <a href="https://www.howtogeek.com/192894/how-to-set-up-bitlocker-encryption-on-windows/">Bitlocker</a> (Windows Vista 7 / 8 / 10 Pro & Enterprise; unfortunately not available if you are using the Home Edition)</li>
-        <li>Linux: Most modern Debian/Ubuntu/Fedora/Arch distros offer <a href="https://en.wikipedia.org/wiki/Linux_Unified_Key_Setup">LUKS</a> as an option during installation. <a href="https://gitlab.com/cryptsetup/cryptsetup/blob/master/README.md">Cryptsetup</a> can be manually configred if not.</li>
-        <li>ChromeOS: Your chromebook is encrypted by default. No extra setup needed.</li>
-    </ul>
-    </div>
-
-    <div id="3p_fde">
-    <p>Third Party Full-Disk Encryption Tools:</p>
-    <ul>
-        <li><a href="https://en.wikipedia.org/wiki/TrueCrypt">TrueCrypt</a> (Mac / Win / Linux) (<strong>WARNING:</strong> No longer maintained. Recommended to use one of its successors instead)</li>
-        <li><a href="https://veracrypt.codeplex.com/">VeryCrypt</a> (Mac / Win / Linux)</li>
-        <li><a href="https://diskcryptor.net/wiki/Main_Page">DiskCryptor</a> (Windows only)</li>
-    </ul>
-    </div>
-
-    <div id="3p_fle">
-    <p>Third Party File Encryption Tools:</p>
-    <ul>
-        <li>
-            <a href="https://www.gnupg.org/">GNU Privacy Guard</a> (Mac / Win / Linux) (designed for <abbr title="Pretty Good Privacy">PGP</abbr> email, but can be used to encrypt <a href="https://www.nas.nasa.gov/hecc/support/kb/using-gpg-to-encrypt-your-data_242.html">anything</a>) 
-
-            <br />
-            The GPG tool can be difficult to work with on its own, so developers created front-ends for the tool to avoid having to work with the command-line.
+            <p>There may be situations in which encryption is of little to no benefit, or the cons outweigh the pros. These include the following:</p>
             <ul>
-                <li><a href="https://www.gpg4win.org/">GPG4Win</a> (Windows)</li>
-                <li><a href="https://gpgtools.org/gpgsuite.html">GPG Tools</a> (macOS)</li>
-                <li><a href="https://utils.kde.org/projects/kgpg/">KGP</a> (Linux, BSD; relies on KDE desktop)</li>
+                <li>The hardware is too old to support a modern operating system where encryption can occur seamlessly.</li>
+                <li>The device is underpowered and encryption may degrade performance considerably.</li>
+                <li>Your device regularly chews through gigabytes of data and maintaining performance is paramount. For instance, someone who does video editing may not find full-disk encryption useful, as they are constantly dumping, altering, and rendering large files. The added overhead from needing to encrypt and decrypt those blocks of data may slow down the rendering process or transfer process from large files to external storage.</li> 
+                <li>Your device holds no absolutely no sensitive data or documents. This could include a computer used only for light internet browsing, gaming, etc.</li>
+                <li>You do not feel that you will be able to remember your decryption password.</li>
             </ul>
-        </li>
-        <li><a href="https://cryptomator.org/">Cryptomator</a> (Mac / Win / Linux)</li>
-        <li><a href="https://www.aescrypt.com/">AESCrypt</a> (Mac / Win / Linux)</li>
-        <li><a href="http://www.7-zip.org/">7-Zip</a> (Win / Linux) (designed for compression, but contains rigorous encryption options as well)</li>
-        <li><a href="https://www.axcrypt.net/">AxCrypt</a> (Windows only) (Includes shell integration)</li>
-        <li><a href="https://minilock.io/">miniLock</a> (ChromeOS, Mac / Win / Linux as a Chrome App)</li>
-    </ul>
-    </div>
-    </section>
 
-    <section id="phone">
-    <h2>Encrypting Your Phone or Tablet</h2>
+            <p>Unfortunately, once you make the decision to encrypt your device, you open yourself to the risk that you may forget the password. If that happens, your files are locked away forever--there is no "Forgot My Password" option for disk-level decryption. No one has the key but you. So take care to remember it or write it down and keep it somewhere safe. If your device already has files on it, you should make sure that you have everything important backed up before you decide to encrypt it.</p>
+        </section>
 
-    <p>If you have an iPhone, encryption should be supported out-of-the-box. In fact, if you have a passcode setup on your iPhone, chances are the device is already encrypted.</p>
+        <section id="fde_vs_fle">
+            <h2>Full-Disk Encryption Versus File-Level Encryption</h2>
 
-    <p>For Android devices, encryption is supported, but not on by default unless you have a handful of devices (usually of the Nexus or Pixel line). Depending on your hardware and the version of Android you are running, encryption may or may not be feasible. While encryption was available, it was not until Android 6.0 that the operating system leveraged hardware-accelerated encryption provided by the processor, meaning it was all done in software. This resulted in sizable overhead that made the performance of the device degrade over time.</p>
+            <p>The term "Full-Disk Encryption" ("FDE" for short) refers to encrypting the entire hard-drive (or at least, everything that isn't necessary to boot the device). When a device is fully encrypted, it must be decrypted before the operating system will even load. If the password is entered incorrectly or the drive fails to decrypt, the loading process stops there:  you won't even make it to the Windows/Apple/Ubuntu logo. If a laptop carried a normal, unencrypted hard-drive with Windows installed on it, a thief who has the laptop would not be able to login to Windows without your password. However, the thief could easily remove the hard-drive from the laptop and mount it as an external drive on another computer, which would allow him to inspect the contents of the drive and look at your My Documents folder without needing a password. If the same thing were attempted with a drive that had been encrypted, the thief would need to know the decryption key/password in order to be able to inspect the files on the drive. Otherwise, all he would see would be blocks of random or gibberish data.</p>
 
-    <p>Low or Mid-Range devices running Android 5.0 (Lollipop) or older: Encryption is still possible, but it may slow down your advice.</p>
+            <p>File-Level Encryption refers to only encrypting individual files that may be sensitive or important. For instance, if your laptop is just a Netflix/light-browsing/light-gaming machine <strong>except for</strong> a handful of tax/student loan/medical documents, you may wish to consider just encrypting those documents instead of encrypting the entire drive. Encrypting on an individual file level has some disadvantages, namely that you leave the metadata of the encrypted files exposed. A malicious individual who peers into your My Documents folder might not be able to open your tax documents, but he would still see that you have them; this could encourage him to copy them anyway, even in encrypted format, to try his hand at password cracking later. For a slightly more embarrassing example, encrypting your Porn folder would stop someone from viewing the videos, but they would still be able to see the files themselves and their salacious filenames.</p>
+        </section>
 
-    <p>Mid-range or High-end devices running Android 6.0 (Marshmallow) or newer: Encryption can safely be enabled with little to no performance overhead.</p>
+        <section id="desktop">
+            <h2>Encrypting Your Desktop or Laptop Computer</h2>
 
-    <p>Note that after you decide to encrypt your Android device, you will <strong>not</strong> be able to disable the lock screen on the phone/tablet. The passcode that is set serves as part of the key for the encryption process, and so it cannot be removed without disabling the encryption. Note as well that once a device is encryption, you cannot permanently decrypt it without wiping the device.</p>
+            <p>There are multiple methods for encrypting your desktop computer, including tools built into the operating system and third-party tools. In general, the first-party tools (i.e. those provided with the operating system) require less work to setup. However, for the truly paranoid, you might not wish to trust Apple or Microsoft to encrypt your data such that they could not be compelled by a three-letter agency to decrypt it without your consent. In which case, you may wish to rely on a third-party tool like TrueCrypt or VeraCrypt.</p>
 
-    <ul>
-        <li>iOS: When setting up your device, make sure that a passcode is set. On iOS 8 or later, this should encrypt the entire device.</li>
-        <li>Android: Settings -> Security -> Device Content Encryption</li>
-    </ul>
+            <p>Listed below are some of the encryption tools available for each of the major operating systems. Stock tools provided by the OS are listed first, then third party and cross-platform tools.</p>
 
-    </section>
+            <div id="1p_fde">
+                <p>First Party Full-Disk Encryption Tools:</p>
 
-    <section id="faq">
-    <h2>Frequently Asked Questions</h2>
+                <ul>
+                    <li>OSX / MacOS: <a href="https://support.apple.com/en-us/HT204837">FileVault</a></li>
+                    <li>Windows: <a href="https://www.howtogeek.com/192894/how-to-set-up-bitlocker-encryption-on-windows/">Bitlocker</a> (Windows Vista 7 / 8 / 10 Pro & Enterprise; unfortunately not available if you are using the Home Edition)</li>
+                    <li>Linux: Most modern Debian/Ubuntu/Fedora/Arch distros offer <a href="https://en.wikipedia.org/wiki/Linux_Unified_Key_Setup">LUKS</a> as an option during installation. <a href="https://gitlab.com/cryptsetup/cryptsetup/blob/master/README.md">Cryptsetup</a> can be manually configred if not.</li>
+                    <li>ChromeOS: Your chromebook is encrypted by default. No extra setup needed.</li>
+                </ul>
+            </div>
 
-    <div id="password_vs_encryption">
-    <h3>Why Can't I Just Lock My Computer Behind a Password?</h3>
+            <div id="3p_fde">
+                <p>Third Party Full-Disk Encryption Tools:</p>
+                <ul>
+                    <li><a href="https://en.wikipedia.org/wiki/TrueCrypt">TrueCrypt</a> (Mac / Win / Linux) (<strong>WARNING:</strong> No longer maintained. Recommended to use one of its successors instead)</li>
+                    <li><a href="https://veracrypt.codeplex.com/">VeryCrypt</a> (Mac / Win / Linux)</li>
+                    <li><a href="https://diskcryptor.net/wiki/Main_Page">DiskCryptor</a> (Windows only)</li>
+                </ul>
+            </div>
 
-    <p>Setting a password on the computer prevents someone from logging into the computer and accessing your files through the installed operating sytem (Windows, Mac, Linux, etc). However, it does not stop someone from removing the hard-drive from the computer and using another computer to view the contents. If the hard-drive's partition is not encrypted, someone could simply plug the hard-drive into another computer and mount the stolen hard-drive from your computer--it would show up as a browsable media peripheral like any other DVD, flash drive, or external hard-drive. At that point, your files would be freely accessible. If the drive were encrypted, however, and the thief did not know the password to properly decrypt it, the drive's contents would look like scrambled or random bits of data.</p>
-    </div>
+            <div id="3p_fle">
+                <p>Third Party File Encryption Tools:</p>
+                <ul>
+                    <li>
+                        <a href="https://www.gnupg.org/">GNU Privacy Guard</a> (Mac / Win / Linux) (designed for <abbr title="Pretty Good Privacy">PGP</abbr> email, but can be used to encrypt <a href="https://www.nas.nasa.gov/hecc/support/kb/using-gpg-to-encrypt-your-data_242.html">anything</a>) 
 
-    <div id="forgot_my_password">
-    <h3>What If I Forget My Encryption Password?</h3>
+                        <br />
+                        The GPG tool can be difficult to work with on its own, so developers created front-ends for the tool to avoid having to work with the command-line.
+                        <ul>
+                            <li><a href="https://www.gpg4win.org/">GPG4Win</a> (Windows)</li>
+                            <li><a href="https://gpgtools.org/gpgsuite.html">GPG Tools</a> (macOS)</li>
+                            <li><a href="https://utils.kde.org/projects/kgpg/">KGP</a> (Linux, BSD; relies on KDE desktop)</li>
+                        </ul>
+                    </li>
+                    <li><a href="https://cryptomator.org/">Cryptomator</a> (Mac / Win / Linux)</li>
+                    <li><a href="https://www.aescrypt.com/">AESCrypt</a> (Mac / Win / Linux)</li>
+                    <li><a href="http://www.7-zip.org/">7-Zip</a> (Win / Linux) (designed for compression, but contains rigorous encryption options as well)</li>
+                    <li><a href="https://www.axcrypt.net/">AxCrypt</a> (Windows only) (Includes shell integration)</li>
+                    <li><a href="https://minilock.io/">miniLock</a> (ChromeOS, Mac / Win / Linux as a Chrome App)</li>
+                </ul>
+            </div>
+        </section>
 
-    <p>Encryption is a one-way process. Once something has been encrypted, you require the original that was used to encrypt it in order to decrypt it. In most cases, this 'key' is a string or password (it can also be a file). If you do not have the key, it cannot be decrypted. Period. For this reason, you should probably keep a backup of your keyfile or passphrase somewhere.</p>
+        <section id="phone">
+            <h2>Encrypting Your Phone or Tablet</h2>
 
-    <p>If you make use of OSX / macOS's built-in FileVault feature, you can choose to upload a backup of the key to Apple so that it can be retrieved in case you ever forget it.</p>
+            <p>If you have an iPhone, encryption should be supported out-of-the-box. In fact, if you have a passcode setup on your iPhone, chances are the device is already encrypted.</p>
 
-    <p>If you make use of Bitlocker, you have an option of using the Trusted Platform Module to derive a key instead of the usual PIN or passphrase. In this setup, Windows uses your computer's hardware profile to create the key. This makes the encryption process transparent to the end-user, and you will not need to manually decrypt the volume every time the computer is turned on, but Windows will still give you a Recovery Key that you should hold onto. Additionally, you can choose to tie it to your Microsoft account, and upload a backup of the key to Microsoft so that it can be retrieved in case you ever forget it.</p>
-    </div>
-    </section>
+            <p>For Android devices, encryption is supported, but not on by default unless you have a handful of devices (usually of the Nexus or Pixel line). Depending on your hardware and the version of Android you are running, encryption may or may not be feasible. While encryption was available, it was not until Android 6.0 that the operating system leveraged hardware-accelerated encryption provided by the processor, meaning it was all done in software. This resulted in sizable overhead that made the performance of the device degrade over time.</p>
 
-    <section id="consider">
-    <h2>Additional Considerations</h2>
+            <p>Low or Mid-Range devices running Android 5.0 (Lollipop) or older: Encryption is still possible, but it may slow down your advice.</p>
 
-    <div id="bios">
-    <h3>Bitlocker: Be Careful When Updating the BIOS</h3>
+            <p>Mid-range or High-end devices running Android 6.0 (Marshmallow) or newer: Encryption can safely be enabled with little to no performance overhead.</p>
 
-    <p>Most people don't update the BIOS for kicks, but if your computer manufacturer tells you that there's a BIOS update available for your desktop or laptop, you should probably update it. Be aware, however, that if you update the BIOS, you will <strong>more than likely</strong> be prompted for your Bitlocker Recovery Key after the computer restarts. This is because the <dfn data-info="The Trusted Platform Module is an encryption standard whereby the cryptographic key is derived at least in part from the hardware profile.">TPM</dfn> checks the BIOS and the Master Boot Record (MBR) before decrypting to ensure that the device hasn't been tampered with. If it detects a change, it will request the Recovery Key before continuing with booting. While it is unlikely you will ever update the BIOS on your computer more than once or twice, simply be aware that you should have the Recovery Key handy if you have Bitlocker enabled.</p>
-    </div>
+            <p>Note that after you decide to encrypt your Android device, you will <strong>not</strong> be able to disable the lock screen on the phone/tablet. The passcode that is set serves as part of the key for the encryption process, and so it cannot be removed without disabling the encryption. Note as well that once a device is encryption, you cannot permanently decrypt it without wiping the device.</p>
 
-    <div id="microsoft">
-    <h3>Bitlocker: Do You Trust Microsoft With Your Bitlocker Key?</h3>
-
-    <p>Your concern here about whether Microsoft should be trusted with your backup Recovery Key depends largely on your level of paranoia and your threat model. If your primary reason for encrypting your laptop is to mitigate damage in case of loss or theft, Microsoft is probably a safe place to backup your key.</p>
-
-    <p>If you are encrypting your laptop because you believe a state actor or a three-letter agency is after you, however, giving Microsoft a copy of your key may not be the best idea. While the risk is largely theoretical at this point, it is known that Microsoft was part of <a href="https://en.wikipedia.org/wiki/PRISM_(surveillance_program)#Extent_of_the_program">PRISM</a>, including <a href="http://cryptome.org/2014/11/ms-onedrive-nsa-prism.htm">SkyDrive</a>, where the backup key is stored. They have co-operated with law enforcement in the past to turn over data about their users when compelled by court order. It is thus not unreasonable to assume that if a law enforcement agency siezed your Bitlocker-encrypted computer and wishes to decrypt it, they might compel Microsoft to provide the backup Recovery Key that you uploaded to them.</p>
-    </div>
-
-    <div id="apple">
-    <h3>FileVault: Do You Trust Apple With Your FileVault Key?</h3>
-
-    <p>Trusting Apple with your FileVault key presents the same concern as trusting Microsoft:  do you believe that Apple would refuse to provide law enforcement with the backup of your FileVault key if compelled to do so by a court order? While Apple has historically resisted attempts to help the FBI and other agencies defeat decryption, they have done so by architecturing the device such that they <em>cannot</em> decrypt it--so that the answer is "We can't." instead of "We won't." If they are storing your backup Filevault Key, however, they very much <em>can</em> and probably <em>must</em> turn it over to law enforcement, if compelled.</p>
-
-    <p>If your threat model does not include the government, however, giving Apple a backup of your key could be useful if your copy is lost or forgotten.</p>
-    </div>
-
-    <div id="encrypted_backups">
-    <h3>Encrypt Your Backups</h3>
-
-    <p>If it is paramount that your sensitive data be encrypted, you should take special care to make sure that all of your backups are encrypted, too. Otherwise, someone who is unable to break into your main computer need only find the unencrypted external hard-drive you have lying around nearby in order to access all of the backed up files in plain view.</p>
-
-    <p>For certain situations, you may wish to not encrypt your external storage if it contains nothing sensitive (e.g. an external hard-drive containing nothing but photos, videos, or music). In that case, you may wish to separate the sensitive from non-sensitive files onto separate drives and encrypt the sensitive drive. Or, you may wish to fall back onto file-level encryption tools to only encrypt sensitive files on the backup device.</p>
-
-    <p>If you are backing up to an offsite or cloud-based system, you may wish to check with the storage provider to see what their policy is regarding whether the data is stored encrypted and, if so, how. For services like Google Drive, Microsoft OneDrive, Dropbox, etc., you may wish to consider encrypting the file yourself before uploading it to the backup service so that you don't have to trust their word on it being encrypted.</p>
-    </section>
-    </div>
-
-    <footer><section id="summary">
-    <h2>Summary</h2>
-    <ul>
-        <li>Unless you're running an ancient or underpowered Android device, encrypt your phone.</li>
-        <ul>
-            <li>iPhones and iPads support fast, native encryption</li>
-            <li>Android devices running 6.0 and above can handle encryption with little performance loss</li>
-        </ul>
-            <li>If you can spare the slight performance and convenience hit, encrypt your laptop.</li>
             <ul>
-            <li>Macs and Macbooks support the built-in encryption tool FileVault</li>
-            <li>Windows machines running Windows 7/8/10 Pro & Enterprise supports Bitlocker, which can encrypt transparently to the end-user</li>
-            <li>Linux users can use LUKS filesystems for built-in encryption, available on your favorite distro.</li>
-            <li>Chromebooks are already encrypted.</li>
-        </ul>
-    </ul>
-    </footer></section>
+                <li>iOS: When setting up your device, make sure that a passcode is set. On iOS 8 or later, this should encrypt the entire device.</li>
+                <li>Android: Settings -> Security -> Device Content Encryption</li>
+            </ul>
+        </section>
+
+        <section id="faq">
+            <h2>Frequently Asked Questions</h2>
+
+            <div id="password_vs_encryption">
+                <h3>Why Can't I Just Lock My Computer Behind a Password?</h3>
+
+                <p>Setting a password on the computer prevents someone from logging into the computer and accessing your files through the installed operating sytem (Windows, Mac, Linux, etc). However, it does not stop someone from removing the hard-drive from the computer and using another computer to view the contents. If the hard-drive's partition is not encrypted, someone could simply plug the hard-drive into another computer and mount the stolen hard-drive from your computer--it would show up as a browsable media peripheral like any other DVD, flash drive, or external hard-drive. At that point, your files would be freely accessible. If the drive were encrypted, however, and the thief did not know the password to properly decrypt it, the drive's contents would look like scrambled or random bits of data.</p>
+            </div>
+
+            <div id="forgot_my_password">
+                <h3>What If I Forget My Encryption Password?</h3>
+
+                <p>Encryption is a one-way process. Once something has been encrypted, you require the original that was used to encrypt it in order to decrypt it. In most cases, this 'key' is a string or password (it can also be a file). If you do not have the key, it cannot be decrypted. Period. For this reason, you should probably keep a backup of your keyfile or passphrase somewhere.</p>
+
+                <p>If you make use of OSX / macOS's built-in FileVault feature, you can choose to upload a backup of the key to Apple so that it can be retrieved in case you ever forget it.</p>
+
+                <p>If you make use of Bitlocker, you have an option of using the Trusted Platform Module to derive a key instead of the usual PIN or passphrase. In this setup, Windows uses your computer's hardware profile to create the key. This makes the encryption process transparent to the end-user, and you will not need to manually decrypt the volume every time the computer is turned on, but Windows will still give you a Recovery Key that you should hold onto. Additionally, you can choose to tie it to your Microsoft account, and upload a backup of the key to Microsoft so that it can be retrieved in case you ever forget it.</p>
+            </div>
+        </section>
+
+        <section id="consider">
+            <h2>Additional Considerations</h2>
+
+            <div id="bios">
+                <h3>Bitlocker: Be Careful When Updating the BIOS</h3>
+
+                <p>Most people don't update the BIOS for kicks, but if your computer manufacturer tells you that there's a BIOS update available for your desktop or laptop, you should probably update it. Be aware, however, that if you update the BIOS, you will <strong>more than likely</strong> be prompted for your Bitlocker Recovery Key after the computer restarts. This is because the <dfn data-info="The Trusted Platform Module is an encryption standard whereby the cryptographic key is derived at least in part from the hardware profile.">TPM</dfn> checks the BIOS and the Master Boot Record (MBR) before decrypting to ensure that the device hasn't been tampered with. If it detects a change, it will request the Recovery Key before continuing with booting. While it is unlikely you will ever update the BIOS on your computer more than once or twice, simply be aware that you should have the Recovery Key handy if you have Bitlocker enabled.</p>
+            </div>
+
+            <div id="microsoft">
+                <h3>Bitlocker: Do You Trust Microsoft With Your Bitlocker Key?</h3>
+
+                <p>Your concern here about whether Microsoft should be trusted with your backup Recovery Key depends largely on your level of paranoia and your threat model. If your primary reason for encrypting your laptop is to mitigate damage in case of loss or theft, Microsoft is probably a safe place to backup your key.</p>
+
+                <p>If you are encrypting your laptop because you believe a state actor or a three-letter agency is after you, however, giving Microsoft a copy of your key may not be the best idea. While the risk is largely theoretical at this point, it is known that Microsoft was part of <a href="https://en.wikipedia.org/wiki/PRISM_(surveillance_program)#Extent_of_the_program">PRISM</a>, including <a href="http://cryptome.org/2014/11/ms-onedrive-nsa-prism.htm">SkyDrive</a>, where the backup key is stored. They have co-operated with law enforcement in the past to turn over data about their users when compelled by court order. It is thus not unreasonable to assume that if a law enforcement agency siezed your Bitlocker-encrypted computer and wishes to decrypt it, they might compel Microsoft to provide the backup Recovery Key that you uploaded to them.</p>
+            </div>
+
+            <div id="apple">
+                <h3>FileVault: Do You Trust Apple With Your FileVault Key?</h3>
+
+                <p>Trusting Apple with your FileVault key presents the same concern as trusting Microsoft:  do you believe that Apple would refuse to provide law enforcement with the backup of your FileVault key if compelled to do so by a court order? While Apple has historically resisted attempts to help the FBI and other agencies defeat decryption, they have done so by architecturing the device such that they <em>cannot</em> decrypt it--so that the answer is "We can't." instead of "We won't." If they are storing your backup Filevault Key, however, they very much <em>can</em> and probably <em>must</em> turn it over to law enforcement, if compelled.</p>
+
+                <p>If your threat model does not include the government, however, giving Apple a backup of your key could be useful if your copy is lost or forgotten.</p>
+            </div>
+
+            <div id="encrypted_backups">
+                <h3>Encrypt Your Backups</h3>
+
+                <p>If it is paramount that your sensitive data be encrypted, you should take special care to make sure that all of your backups are encrypted, too. Otherwise, someone who is unable to break into your main computer need only find the unencrypted external hard-drive you have lying around nearby in order to access all of the backed up files in plain view.</p>
+
+                <p>For certain situations, you may wish to not encrypt your external storage if it contains nothing sensitive (e.g. an external hard-drive containing nothing but photos, videos, or music). In that case, you may wish to separate the sensitive from non-sensitive files onto separate drives and encrypt the sensitive drive. Or, you may wish to fall back onto file-level encryption tools to only encrypt sensitive files on the backup device.</p>
+
+                <p>If you are backing up to an offsite or cloud-based system, you may wish to check with the storage provider to see what their policy is regarding whether the data is stored encrypted and, if so, how. For services like Google Drive, Microsoft OneDrive, Dropbox, etc., you may wish to consider encrypting the file yourself before uploading it to the backup service so that you don't have to trust their word on it being encrypted.</p>
+            </div>
+        </section>
+
+        <footer><section id="summary">
+            <h2>Summary</h2>
+            <ul>
+                <li>Unless you're running an ancient or underpowered Android device, encrypt your phone.</li>
+                <ul>
+                    <li>iPhones and iPads support fast, native encryption</li>
+                    <li>Android devices running 6.0 and above can handle encryption with little performance loss</li>
+                </ul>
+                <li>If you can spare the slight performance and convenience hit, encrypt your laptop.</li>
+                <ul>
+                    <li>Macs and Macbooks support the built-in encryption tool FileVault</li>
+                    <li>Windows machines running Windows 7/8/10 Pro & Enterprise supports Bitlocker, which can encrypt transparently to the end-user</li>
+                    <li>Linux users can use LUKS filesystems for built-in encryption, available on your favorite distro.</li>
+                    <li>Chromebooks are already encrypted.</li>
+                </ul>
+            </ul>
+        </section></footer>
+    </div><!-- end container -->
 </body>
 </html>

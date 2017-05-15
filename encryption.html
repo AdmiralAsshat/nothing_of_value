@@ -74,6 +74,8 @@
             <div class="msg success"><strong>Chromebooks</strong> are encrypted out-of-the-box.</div>
             <div class="msg"><strong>Windows 10 Pro, Enterprise, and Education</strong> editions have a built-in encryption option.</div>
             <div class="msg"><strong>Android</strong> devices have a built-in encryption option.</div>
+            
+            <a href="#toc"><button class="btn btn-sm">Back to Top</button></a>
         </section>
 
         <section id="or_not_to_use">
@@ -141,7 +143,7 @@
                     <li><a href="https://veracrypt.codeplex.com/">VeryCrypt</a> <strong>(Mac / Win / Linux)</strong></li>
                     <li><a href="https://diskcryptor.net/wiki/Main_Page">DiskCryptor</a> <strong>(Windows only)</strong></li>
                 </ul>
-                    <div id class="msg danger"><strong>WARNING:</strong> TrueCrypt is longer maintained and is not receiving bugfixes. It is recommended to use one of its successors instead.</div>
+                <div id class="msg danger"><strong>WARNING:</strong> TrueCrypt is longer maintained and is not receiving bugfixes. It is recommended to use one of its successors instead.</div>
             </div>
 
             <div id="3p_fle">
@@ -150,17 +152,17 @@
                     <li>
                         <a href="https://www.gnupg.org/">GNU Privacy Guard</a> <strong>(Mac / Win / Linux)</strong> 
                         <div class="msg success">
-                        <strong><abbrev title="GNU Privacy Guard">GPG</abbrev></strong> was designed for encrypting e-mail with <dfn data-info="Pretty Good Privacy is a standard for providing cryptographic authentication and security for data communication, most notably e-mail.">PGP</dfn>, but can be used to encrypt <a href="https://www.nas.nasa.gov/hecc/support/kb/using-gpg-to-encrypt-your-data_242.html">anything</a>. 
+                            <strong><abbrev title="GNU Privacy Guard">GPG</abbrev></strong> was designed for encrypting e-mail with <dfn data-info="Pretty Good Privacy is a standard for providing cryptographic authentication and security for data communication, most notably e-mail.">PGP</dfn>, but can be used to encrypt <a href="https://www.nas.nasa.gov/hecc/support/kb/using-gpg-to-encrypt-your-data_242.html">anything</a>. 
                         </div>
 
                         <br />
                         <div class="msg">
-                        The GPG tool can be difficult to work with on its own, so developers created front-ends for the tool to avoid having to work with the command-line:
-                        <ul>
-                            <li><a href="https://www.gpg4win.org/">GPG4Win</a> (<strong>Windows</strong>)</li>
-                            <li><a href="https://gpgtools.org/gpgsuite.html">GPG Tools</a> (<strong>macOS</strong>)</li>
-                            <li><a href="https://utils.kde.org/projects/kgpg/">KGP</a> (<strong>Linux, BSD</strong>; relies on KDE desktop)</li>
-                        </ul>
+                            The GPG tool can be difficult to work with on its own, so developers created front-ends for the tool to avoid having to work with the command-line:
+                            <ul>
+                                <li><a href="https://www.gpg4win.org/">GPG4Win</a> (<strong>Windows</strong>)</li>
+                                <li><a href="https://gpgtools.org/gpgsuite.html">GPG Tools</a> (<strong>macOS</strong>)</li>
+                                <li><a href="https://utils.kde.org/projects/kgpg/">KGP</a> (<strong>Linux, BSD</strong>; relies on KDE desktop)</li>
+                            </ul>
                         </div>
                     </li>
                     <li><a href="https://cryptomator.org/">Cryptomator</a> (<strong>Mac / Win / Linux</strong>)</li>
@@ -171,7 +173,7 @@
                 </ul>
 
                 <div class="msg">
-                Some of your existing applications may be able to pull double-duty as encryption programs. If you already secure your e-mail via <strong>PGP</strong>, you can use the same tool to encrypt your files. If you have 7-Zip already installed for extracting files, it can encrypt files for you as well.
+                    Some of your existing applications may be able to pull double-duty as encryption programs. If you already secure your e-mail via <strong>PGP</strong>, you can use the same tool to encrypt your files. If you have 7-Zip already installed for extracting files, it can encrypt files for you as well.
                 </div>
             </div>
             <a href="#toc"><button class="btn btn-sm">Back to Top</button></a>
@@ -196,11 +198,11 @@
             </ul>
 
             <div class="msg warning">
-            If you encrypt your Android device, you cannot disable the lockscreen.
+                If you encrypt your Android device, you cannot disable the lockscreen.
             </div>
 
             <div class="msg success">
-            An encrypted Android device with Smart-Lock enabled can still bypass the lockscreen when Smart-Lock is triggered.
+                An encrypted Android device with Smart-Lock enabled can still bypass the lockscreen when Smart-Lock is triggered.
             </div>
             <a href="#toc"><button class="btn btn-sm">Back to Top</button></a>
         </section>
@@ -235,7 +237,7 @@
                 <p>Most people don't update the BIOS for kicks, but if your computer manufacturer tells you that there's a BIOS update available for your desktop or laptop, you should probably update it. Be aware, however, that if you update the BIOS, you will <strong>more than likely</strong> be prompted for your Bitlocker Recovery Key after the computer restarts. This is because the <dfn data-info="The Trusted Platform Module is an encryption standard whereby the cryptographic key is derived at least in part from the hardware profile.">TPM</dfn> checks the BIOS and the Master Boot Record (MBR) before decrypting to ensure that the device hasn't been tampered with. If it detects a change, it will request the Recovery Key before continuing with booting. While it is unlikely you will ever update the BIOS on your computer more than once or twice, simply be aware that you should have the Recovery Key handy if you have Bitlocker enabled.</p>
 
                 <div class="msg warning">
-                <strong>Warning!</strong> Updating your BIOS may trigger a prompt for the recovery key! Always have the recovery key accessible when you update the BIOS.
+                    <strong>Warning!</strong> Updating your BIOS may trigger a prompt for the recovery key! Always have the recovery key accessible when you update the BIOS.
                 </div>
             </div>
 
@@ -247,7 +249,7 @@
                 <p>If you are encrypting your laptop because you believe a state actor or a three-letter agency is after you, however, giving Microsoft a copy of your key may not be the best idea. While the risk is largely theoretical at this point, it is known that Microsoft was part of <a href="https://en.wikipedia.org/wiki/PRISM_(surveillance_program)#Extent_of_the_program">PRISM</a>, including <a href="http://cryptome.org/2014/11/ms-onedrive-nsa-prism.htm">SkyDrive</a>, where the backup key is stored. They have co-operated with law enforcement in the past to turn over data about their users when compelled by court order. It is thus not unreasonable to assume that if a law enforcement agency seized your Bitlocker-encrypted computer and wishes to decrypt it, they might compel Microsoft to provide the backup Recovery Key that you uploaded to them.</p>
 
                 <div class="msg danger">
-                <strong>Danger!</strong> If you fear that you may now or ever be targeted by your government, do not upload a backup of your key to Microsoft.
+                    <strong>Danger!</strong> If you fear that you may now or ever be targeted by your government, do not upload a backup of your key to Microsoft.
                 </div>
             </div>
 
@@ -269,11 +271,11 @@
                 <p>If you are backing up to an offsite or cloud-based system, you may wish to check with the storage provider to see what their policy is regarding whether the data is stored encrypted and, if so, how. For services like Google Drive, Microsoft OneDrive, Dropbox, etc., you may wish to consider encrypting the file yourself before uploading it to the backup service so that you don't have to trust their word on it being encrypted.</p>
 
                 <div class="msg">
-                A system is only as secure as its weakest point. If the regular data is encrypted, its backup should be encrypted as well.
+                    A system is only as secure as its weakest point. If the regular data is encrypted, its backup should be encrypted as well.
                 </div>
 
                 <div class="msg success">
-                Some services that support encrypted backups out-of-the-box include the option for a user-supplied key so that only you can decrypt the files.
+                    Some services that support encrypted backups out-of-the-box include the option for a user-supplied key so that only you can decrypt the files.
                 </div>
             </div>
             <a href="#toc"><button class="btn btn-sm">Back to Top</button></a>
@@ -281,14 +283,14 @@
 
         <footer><section id="summary">
             <h2>Summary</h2>
-                <h3>Unless you're running an ancient or underpowered Android device, encrypt your phone.</h3>
-                    <div class="msg success">iPhones and iPads support fast, native encryption</div>
-                    <div class="msg">Android devices running 6.0 and above can handle encryption with little performance loss</div>
-                <h3>If you can spare the slight performance and convenience hit, encrypt your laptop.</h3>
-                    <div class="msg">Macs and Macbooks support the built-in encryption tool FileVault</div>
-                    <div class="msg">Windows machines running Windows 7/8/10 Pro & Enterprise support Bitlocker, which can encrypt transparently to the end-user</div>
-                    <div class="msg">Linux users can use LUKS filesystems for built-in encryption, available on your favorite distro.</div>
-                    <div class="msg success">Chromebooks are already encrypted.</div>
+            <h3>Unless you're running an ancient or underpowered Android device, encrypt your phone.</h3>
+            <div class="msg success">iPhones and iPads support fast, native encryption</div>
+            <div class="msg">Android devices running 6.0 and above can handle encryption with little performance loss</div>
+            <h3>If you can spare the slight performance and convenience hit, encrypt your laptop.</h3>
+            <div class="msg">Macs and Macbooks support the built-in encryption tool FileVault</div>
+            <div class="msg">Windows machines running Windows 7/8/10 Pro & Enterprise support Bitlocker, which can encrypt transparently to the end-user</div>
+            <div class="msg">Linux users can use LUKS filesystems for built-in encryption, available on your favorite distro.</div>
+            <div class="msg success">Chromebooks are already encrypted.</div>
             <a href="#toc"><button class="btn btn-sm">Back to Top</button></a>
         </section></footer>
     </div><!-- end container -->

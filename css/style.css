@@ -1,27 +1,53 @@
 /* Landing section */
 .hero {
-            background: #eee;
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 1em;
-        }
-
-section {
-    padding-top: 1em;
-    padding-bottom: 1em;
+  background: #eee;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 1em;
 }
 
+section {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+h2 {
+ border-bottom: 1px solid #eee; 
+}
+
+
+/*Extra Msg types*/
+/*Modeled on Bootstrap Alerts*/
+.msg.danger {
+  border-color: #e44; 
+  background: #fdd;
+}
+
+.msg.warning {
+  border-color: #ffcc00;
+  background: #faebcc;
+}
+
+.msg.success {
+  border-color: #2d2;
+  background: #dfd;
+}
+
+/*Table of Contents styling*/
+#toc li{
+  margin-bottom: 0.5em;
+}
 
 /* Alternate section background colors */
 /*section:nth-child(even) {
     color: #000; 
     background-color: #b1b8e3;
-}*/
+    }*/
 
 /*section:nth-child(odd) {
     color:#fff;
     background-color: #26316d;
-}*/
+    }*/
 
 /* Definition Display */
 /* Credit to : */
@@ -33,7 +59,7 @@ dfn {
   cursor: help;
   font-style: normal;
   position: relative;
-  
+
 }
 dfn::after {
   content: attr(data-info);

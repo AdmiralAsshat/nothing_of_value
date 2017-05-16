@@ -67,6 +67,8 @@
                 <li>Because information coming from the corporate network may be sensitive, all of the packets sent over the VPN tunnel are encrypted.</li>
                 <li>Because the machine is assigned an IP address within the private network, all information sent to the outside web appear to originate from the VPN's IP address. That is to say, if you sign into your employer's VPN and then sign into Facebook while the VPN is turned on, Facebook may show you having signed in with your employer's IP address, not the IP address of your home wi-fi.</li>
             </ol>
+
+            <a href="#toc"><button class="btn btn-sm">Back to Top</button></a>
         </section>
 
         <section id="vpn_for_play">
@@ -79,6 +81,11 @@
             <p>Without a VPN, your ISP (Internet Service Provider) would see every domain on the web you connect to, and any cleartext data that is sent their way. With a VPN turned on, however, your ISP would see your computer sending data to the VPN server, but they wouldn't be able to see what is being sent.</p>
 
             <p>Finally, because the query appears to come from the IP address of the VPN server rather than the IP of the user's home wi-fi, VPN's can be used to bypass georestrictions. VPN's are very popular in countries where Netflix is not offered, for instance. By using a VPN with a US-based server to sign into Netflix, the user appears to be in the US, and Netflix will allow the user to access US-locked media.</p>
+
+            <div class="msg warning">
+                <strong>Warning:</strong> Don't use your work VPN to browse privately. It may be safe from prying eyes at the coffee shop, but your employer might still be able to see it!
+            </div>
+            <a href="#toc"><button class="btn btn-sm">Back to Top</button></a>
         </section>
 
         <section id="providers"> 
@@ -96,6 +103,11 @@
                 <li>Servers hosted in multiple countries (Effective georestriction circumvention may require that you sometimes switch between continents).</li>
                 <li>IP and DNS leak protection (You cannot effectively hide your traffic from your ISP if you are still reaching out to the ISP for domain name resolution)</li>
             </ul>
+
+            <div class="msg warning">
+              <strong>Warning:</strong> Be very suspicious of free VPN providers. Anything you are not paying for directly is likely being "subsidized" by another transaction, namely the selling of your browsing history to advertisers. 
+            </div>
+            <a href="#toc"><button class="btn btn-sm">Back to Top</button></a>
         </section>
 
         <section id="faq">
@@ -123,6 +135,10 @@
                 <h3>Should I use a VPN all the time?</h3>
 
                 <p>Using a VPN constantly will depend on what you are trying to achieve. If you're only trying to protect yourself from malicious eavesdroppers at a coffee shop or airport wifi, then you can safely turn off the VPN when you're at home. On the other hand, if your concern is stopping your ISP from spying on your activity, or from sites you visit on the internet knowing your true IP, then using a VPN at all times would be more beneficial.</p>
+
+                <div class="msg">
+                    Always double-check that your VPN is actually doing what it says by using a site or search engine to check your IP. You should be able to type "What is my IP" into your favorite search engine, and it will usually return your public IP and often a map based on the geolocation of that IP. If it shows the IP and geolocation of your VPN, then it is working as intended. If it shows your real IP and current location, however, your VPN is not doing its job.
+                </div>
             </div>
 
             <div id="anonymity">
@@ -135,7 +151,12 @@
                 <h3>I turned on the VPN, and now this site says that someone logged into my account from overseas!</h3>
 
                 <p>Certain websites like Facebook, Gmail, Paypal, etc. have various safeguards that are built-in to try to prevent people from logging in with compromised credentials. Essentially, when you log into Facebook, it keeps track of the IP Address from where you logged in and a rough geolocation corresponding to that IP Address. It uses this to build a profile of 'you' and where you've previously logged in. By doing so, it has a built-in early warning system that can trigger if an IP Address from halfway across the world suddenly logs in using your credentials. For instance, if you have a five-year history of logging into your Facebook exclusively from the georegion around Chicago, and suddenly your account is accessed from an IP Address in India, Facebook will assume that you have been hacked and send you an alert. Facebook has no way of knowing whether that IP is a foreign entity or you logging in through a VPN. And so if you start using a VPN to change your external IP from your hometown of Chicago to a server in the Bahamas, Facebook would similarly trigger an alert when it starts to see you logging in from the Bahamas. This is not necessarily a bad thing, provided you know why it's happening.</p>
+
+                <div class="msg">
+                    The sign-in messages will eventually go away if you use the same VPN server repeatedly. Google or Facebook will learn to associate that IP with your profile and stop considering it unusual.
+                </div>
             </div>
+            <a href="#toc"><button class="btn btn-sm">Back to Top</button></a>
         </section>
 
         <section id="additional">
@@ -148,12 +169,13 @@
             
             <h2>Summary</h2>
             <ul>
-                <li>Use a VPN any time you connect to a public wifi.</li>
-                <li>Use a VPN if you want to bypass georestricted content.</li>
-                <li>Consider using a VPN all the time if you want to avoid your ISP spying on you.</li>
-                <li>Do your research and find a reputable VPN provider. Free VPN's are incredibly shady and may be no safer than surfing in the clear.</li> 
+                <div class="msg">Use a VPN any time you connect to a public wifi.</div>
+                <div class="msg">Use a VPN if you want to bypass georestricted content.</div>
+                <div class="msg success">Consider using a VPN all the time if you want to avoid your ISP spying on you.</div>
+                <div class="msg warning">Do your research and find a reputable VPN provider. Free VPN's are incredibly shady and may be no safer than surfing in the clear.</div> 
             </ul>
         </section></footer>
+        <a href="#toc"><button class="btn btn-sm">Back to Top</button></a>
     </div><!-- end container -->
 </body>
 </html>

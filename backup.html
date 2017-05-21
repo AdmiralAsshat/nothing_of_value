@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>You Need a Backup</title>
     <link rel="stylesheet" href="css/entireframework.min.css" type="text/css" />
@@ -10,7 +11,7 @@
 <body>
     <nav class="nav" tabindex="-1" onclick="this.focus()">
         <div class="container">
-            <a class="pagename current" href="index.html">The Bare Minimum</a>
+            <a class="pagename current" href="index.html">TBM</a>
             <a href="password_manager.html">Password Manager</a>
             <a href="adblocker.html">Adblocker</a> 
             <a href="vpn.html">VPN</a>
@@ -27,7 +28,7 @@
 
         <div class="hero">
             <header><section id="top">
-                <p><h1>You Need a Backup</h1></p>
+                <h1>You Need a Backup</h1>
 
                 <p>Your data is valuable. Too valuable to keep all in one place. Unlike physical media, the process of making a copy of your data is not an expensive or laborious process. On the contrary, the mere fact that it exists digitally allows you to make nearly infinite copies at a fraction of the time it would take to physically xerox a document.</p>
 
@@ -151,7 +152,7 @@
             <div id="automate">
                 <h3>Manually Backing Stuff Up is Tedious and Time-Consuming. Can I Make it Easier or Automatic?</h3>
 
-                <p>If you decide to manually initiate your backups, the process can be expedited by leveraging a built-in tool like <a href="https://www.microsoft.com/en-us/download/details.aspx?id=15155">SyncToy</a> to handle the bulk of the legwork. Rather than copying the entire directory every time (wasteful), or hand-selecting each file to copy over every time (tedious), a utility like SyncToy can examine the source and the destination directory and only copy over files that are missing or have changed. The first time a backup is performed, it would need to copy over the entire directory, but every subsequent time the process would run much more quickly, because SyncToy would only copy over the files that have been added or modified since the last time the backup ran. With some ingenuity, you could even make Synctoy launch <a href="http://www.wikihow.com/Use-SyncToy-to-Automatically-Backup-Your-Thumbdrive">automatically</a> whenever a flash drive is plugged in.</p>
+                <p>If you decide to manually initiate your backups, the process can be expedited by leveraging a built-in tool like <a href="https://www.microsoft.com/en-us/download/details.aspx?id=15155">SyncToy</a> to handle the bulk of the legwork. Rather than copying the entire directory every time (wasteful), or hand-selecting each file to copy over every time (tedious), a utility like SyncToy can examine the source and the destination directory and only copy over files that are missing or have changed. The first time a backup is performed, it would need to copy over the entire directory, but every subsequent time the process would run much more quickly, because SyncToy would only copy over the files that have been added or modified since the last time the backup ran. With some ingenuity, you could even make SyncToy launch <a href="http://www.wikihow.com/Use-SyncToy-to-Automatically-Backup-Your-Thumbdrive">automatically</a> whenever a flash drive is plugged in.</p>
 
                 <p>The entire process of backing up can easily be automated. I do not recommend automating <strong>all</strong> of your backups, because that would require that all of your backup media be plugged into your computer at all times. If that's the case, whatever wipes out your computer could wipe out your backup as well (e.g. a power surge). Ideally, if you are backing up to an external hard-drive or flash-drive, you should unplug it as soon as you're done and stick it somewhere safe.</p>
 
@@ -216,7 +217,7 @@
             <div id="offsite">
                 <h3>Where Can I find an Offsite / Cloud Backup Storage Provider?</h3>
 
-                <p>You may wish to do your own research when finding a cloud backup provider, as each individual's needs will differ wildly depending on how much data they have to backup and how accessible they need it.</p> For instance, those who have several local back-ups and only require an offsite backup in case of emergencies might look into <a href="https://aws.amazon.com/glacier/">Amazon Glacier</a>, which is relatively cheap as far as what the storage costs. If the data actually needs to be <em>retrieved</em>, however, the price goes up. Cheap options can be found if you have less than a terabyte of data to store. For those with multiple terabytes to store, various services (see below) offer unlimited storage for around $50-$60 per year. Many other sites specialize in cloud-storage, which is primarily designed for sharing media and were not designed for backup, but if you happen to have one, it can nonetheless be used to backup files. I do not wish to promote any one service over another--you are encouraged to dig into them and see which will work best for you. Some of the more popular ones are mentioned below.</p>
+                <p>You may wish to do your own research when finding a cloud backup provider, as each individual's needs will differ wildly depending on how much data they have to backup and how accessible they need it. For instance, those who have several local back-ups and only require an offsite backup in case of emergencies might look into <a href="https://aws.amazon.com/glacier/">Amazon Glacier</a>, which is relatively cheap as far as what the storage costs. If the data actually needs to be <em>retrieved</em>, however, the price goes up. Cheap options can be found if you have less than a terabyte of data to store. For those with multiple terabytes to store, various services (see below) offer unlimited storage for around $50-$60 per year. Many other sites specialize in cloud-storage, which is primarily designed for sharing media and were not designed for backup, but if you happen to have one, it can nonetheless be used to backup files. I do not wish to promote any one service over another--you are encouraged to dig into them and see which will work best for you. Some of the more popular ones are mentioned below.</p>
 
                 <h4>Offsite Backup Services</h4>
                 <ul>
@@ -265,7 +266,7 @@
         </section>
 
         <section id="additional">
-            <h2>Additonal Resources</h2>
+            <h2>Additional Resources</h2>
 
             <a href="http://ims.uthscsa.edu/information_security/documents/Backup.pdf">Backup Guidelines</a>
 
@@ -279,7 +280,7 @@
             <ul>
                 <div class="msg">Backup all important documents, pictures, songs, etc. Backups can be scheduled to happen automatically.</div>
                 <div class="msg success">Use the <strong>3-2-1</strong> rule for backing up:  at least three copies of the data, at least two different storage mediums, at least one copy off-site.</div>
-                <div class="msg success">Keep one back-up easily accesible for quick recovery, keep another off-site in case your house burns down.</div>
+                <div class="msg success">Keep one back-up easily accessible for quick recovery, keep another off-site in case your house burns down.</div>
                 <div class="msg warning">Do not trust the cloud to be your only form of backup. Keep local copies as well.</div>
             </ul>
         </section></footer>
